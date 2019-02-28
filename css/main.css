@@ -1,0 +1,339 @@
+body {
+  font-family: "Gotham Pro";
+  font-size: 18px;
+  line-height: 20px;
+  lletter-spacing: 0.1px; }
+
+h1 {
+  font-size: 35px; }
+
+h2 {
+  font-size: 22px; }
+
+.main-head {
+  height: 796px;
+  padding-top: 39px;
+  background: url("../img/header-bg.png") center; }
+
+.logo a {
+  display: block;
+  margin-top: 12px;
+  margin-left: -33px;
+  text-transform: uppercase;
+  color: #000000;
+  font-weight: 600; }
+
+.slogan p {
+  width: 350px;
+  margin-left: -68px;
+  letter-spacing: -1.3px; }
+
+.phone {
+  position: relative; }
+  .phone a:first-child {
+    margin-left: 45px; }
+  .phone a:nth-child(2) {
+    margin-left: 10px; }
+  .phone a:last-child {
+    position: absolute;
+    width: 216px;
+    top: 22px;
+    left: 178px;
+    letter-spacing: -1.3px;
+    color: #000000;
+    text-decoration: underline #a8a7a7; }
+    .phone a:last-child:hover {
+      color: #a8a7a7; }
+  .phone span {
+    position: absolute;
+    width: 211px;
+    top: -2px;
+    left: 185px;
+    font-size: 22px;
+    font-weight: 500; }
+
+.main-screen {
+  padding-top: 43px; }
+  .main-screen h1 {
+    width: 100%;
+    margin-left: -33px;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 57px;
+    letter-spacing: -0.3px; }
+  .main-screen span {
+    color: #67ab42; }
+  .main-screen p {
+    width: 90%;
+    margin-top: 17px;
+    margin-left: -33px;
+    font-size: 25px;
+    line-height: 30px;
+    letter-spacing: -0.2px; }
+
+.main-butns .tool {
+  position: relative;
+  padding-top: 45px;
+  padding-left: 92px; }
+  .main-butns .tool::before {
+    content: "";
+    position: absolute;
+    width: 92px;
+    height: 42px;
+    top: 35px;
+    left: -35px;
+    background: url(../img/tool.svg) no-repeat; }
+.main-butns .van {
+  position: relative;
+  padding-top: 36px;
+  padding-left: 95px;
+  line-height: 25px; }
+  .main-butns .van::before {
+    content: "";
+    position: absolute;
+    width: 102px;
+    height: 42px;
+    top: 40px;
+    left: -38px;
+    background: url(../img/van.svg) no-repeat; }
+.main-butns .calculate {
+  display: flex;
+  align-items: center;
+  margin-top: 65px;
+  margin-left: -30px;
+  width: 376px;
+  height: 83px;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 500;
+  background: linear-gradient(to top, #63a440, #7dce4e);
+  border-bottom: 3px solid #4c8d27;
+  border-radius: 40px;
+  box-shadow: 0 10px 16px #bbdba8;
+  -moz-transition-property: background, box-shadow;
+  -o-transition-property: background, box-shadow;
+  -webkit-transition-property: background, box-shadow;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s; }
+  .main-butns .calculate:hover {
+    background: linear-gradient(to top, #68aa44, #88d659);
+    text-decoration: none;
+    box-shadow: 0 10px 20px #91c572; }
+  .main-butns .calculate span {
+    position: relative;
+    margin-left: 45px; }
+    .main-butns .calculate span::after {
+      content: "";
+      position: absolute;
+      left: 259px;
+      width: 25px;
+      height: 25px;
+      background: url(../img/arrow.svg) center no-repeat;
+      filter: brightness(100); }
+
+.video-wrap {
+  position: absolute;
+  top: 468px; }
+  .video-wrap .videos {
+    padding-left: 272px; }
+    .video-wrap .videos .under-wrap {
+      display: inline-block;
+      position: relative;
+      width: 205px;
+      height: 58px;
+      top: -25px;
+      padding-top: 5px;
+      padding-left: 39px;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: 100;
+      background-color: #fff;
+      line-height: 23px; }
+    .video-wrap .videos .play {
+      display: inline-block;
+      position: relative;
+      width: 83px;
+      height: 83px;
+      margin: 0;
+      left: 22px;
+      cursor: pointer;
+      background: linear-gradient(to top, #63a440, #7dce4e);
+      border-radius: 50px;
+      z-index: 500;
+      -moz-transition-property: background;
+      -o-transition-property: background;
+      -webkit-transition-property: background; }
+      .video-wrap .videos .play:hover {
+        background: linear-gradient(to top, #6bae46, #86d856); }
+      .video-wrap .videos .play::before {
+        content: "";
+        position: absolute;
+        width: 27px;
+        height: 27px;
+        top: 28px;
+        left: 32px;
+        background-image: url(../img/play.svg);
+        filter: brightness(100); }
+    .video-wrap .videos .under {
+      border-bottom: 1px solid gray;
+      line-height: 2px; }
+
+.presipresentation {
+  padding-top: 87px; }
+  .presipresentation .pres-1, .presipresentation .pres-2, .presipresentation .pres-3 {
+    width: 380px;
+    border-radius: 10px;
+    box-shadow: 0px 15px 30px #ebebeb; }
+  .presipresentation .pres-1, .presipresentation .pres-2 {
+    margin-right: 15px; }
+  .presipresentation h2 {
+    margin-top: 26px;
+    text-align: center; }
+  .presipresentation p {
+    text-align: center;
+    line-height: 25px;
+    letter-spacing: -0.2px; }
+  .presipresentation .pres-1 h2 {
+    text-align: center; }
+  .presipresentation .pres-1 p {
+    padding-top: 10px;
+    padding-left: 23px;
+    padding-right: 23px;
+    padding-bottom: 14px; }
+  .presipresentation .pres-2 h2 {
+    padding-left: 30px;
+    padding-right: 25px;
+    line-height: 30px; }
+  .presipresentation .pres-2 p {
+    padding-left: 15px;
+    padding-right: 15px; }
+  .presipresentation .pres-3 p {
+    padding-top: 10px;
+    padding-left: 28px;
+    padding-right: 28px; }
+
+.download {
+  height: 747px;
+  margin-top: 86px;
+  background: url(../img/download-pres.png) center; }
+  .download .download-hl {
+    text-align: center;
+    color: #ffffff;
+    padding-top: 45px; }
+    .download .download-hl h1 {
+      line-height: 44px; }
+    .download .download-hl span {
+      color: #67ab42; }
+    .download .download-hl p {
+      padding-top: 8px;
+      letter-spacing: -0.2px; }
+
+.dwnld-form {
+  margin-top: 105px; }
+  .dwnld-form h2 {
+    width: 350px;
+    margin-left: 126px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    line-height: 30px; }
+
+#download-phone {
+  display: inline-block;
+  position: relative;
+  width: 304px;
+  height: 60px;
+  margin-top: 20px;
+  margin-left: 145px;
+  padding-left: 63px;
+  border: none;
+  border-radius: 40px;
+  box-shadow: inset 0 3px 20px #ebebeb;
+  font-size: 15px;
+  font-weight: 100; }
+  #download-phone:focus {
+    outline: none; }
+
+.phone-ico {
+  position: relative; }
+  .phone-ico::before {
+    content: "";
+    position: absolute;
+    width: 19px;
+    height: 18px;
+    left: -274px;
+    top: -7px;
+    background: url(../img/telephone.svg);
+    background-repeat: no-repeat; }
+
+.dwnld-form .download-btn {
+  display: block;
+  position: relative;
+  width: 304px;
+  height: 72px;
+  margin-left: 145px;
+  margin-top: 15px;
+  padding-top: 24px;
+  padding-left: 36px;
+  color: #ffffff;
+  font-weight: 500;
+  background: linear-gradient(to top, #63a440, #7dce4e);
+  border-bottom: 3px solid #4c8d27;
+  border-radius: 50px;
+  box-shadow: 0 5px 10px #bbdba8;
+  -moz-transition-property: box-shadow;
+  -o-transition-property: box-shadow;
+  -webkit-transition-property: box-shadow;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s; }
+  .dwnld-form .download-btn:hover {
+    background: linear-gradient(to top, #68aa44, #88d659);
+    box-shadow: 0 5px 20px #91c572;
+    text-decoration: none; }
+  .dwnld-form .download-btn span {
+    text-shadow: 0 1px 0px #4a8929; }
+    .dwnld-form .download-btn span:after {
+      content: "";
+      position: absolute;
+      display: inline-block;
+      left: 251px;
+      top: 25px;
+      width: 19px;
+      height: 19px;
+      background-image: url(../img/download.svg);
+      filter: brightness(100); }
+.dwnld-form .agreement {
+  position: relative;
+  margin-left: 188px;
+  font-size: 10px;
+  font-weight: 500;
+  padding: 10px; }
+  .dwnld-form .agreement::before {
+    content: "";
+    position: absolute;
+    left: -14px;
+    top: 12px;
+    width: 15px;
+    height: 15px;
+    box-shadow: inset 3px 3px 7px #ebebeb;
+    border-radius: 3px; }
+  .dwnld-form .agreement::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left: -11px;
+    top: 10px; }
+  .dwnld-form .agreement a {
+    color: #000000;
+    border-bottom: 1px solid #d4d4d4; }
+    .dwnld-form .agreement a:hover {
+      text-decoration: none; }
+
+#download-check {
+  display: none; }
+  #download-check:checked + label::after {
+    content: url(../img/check.svg); }
+
+/*# sourceMappingURL=main.css.map */
