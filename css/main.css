@@ -336,4 +336,20 @@ h2 {
   #download-check:checked + label::after {
     content: url(../img/check.svg); }
 
+.materials {
+  padding-top: 77px;
+  text-align: center; }
+  .materials h1 {
+    width: 600px; }
+    .materials h1 span {
+      color: #67ab42; }
+  .materials .material-photo {
+    margin-top: 60px;
+    min-width: 71% !important; }
+    .materials .material-photo .second {
+      margin-top: 80px; }
+    .materials .material-photo h2 {
+      margin-top: 30px;
+      font-weight: 600; }
+
 /*# sourceMappingURL=main.css.map */
