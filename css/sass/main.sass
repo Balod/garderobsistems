@@ -273,7 +273,7 @@ h2
         background: url(../img/telephone.svg)
         background-repeat: no-repeat
 
-.dwnld-form, .frozen-form
+.dwnld-form, .frozen-form, .test-form
     .download-btn
         display: block
         position: relative
@@ -346,6 +346,8 @@ h2
 
 .rooms
     padding-top: 83px
+    .row
+        width: 100%
     span
         color: $main-color
 
@@ -449,7 +451,7 @@ h2
                 &:after
                     content: none
 
-#frozen-name
+#frozen-name, #test-name, #test-phone
     display: inline-block
     position: relative
     width: 304px
@@ -491,7 +493,7 @@ h2
         background: url(../img/user.svg)
         background-repeat: no-repeat
 
-.frozen-agreement
+.frozen-agreement, .test-form .test-check
     display: block
     position: relative
     margin-top: 11px
@@ -518,6 +520,7 @@ h2
         span
             color: $main-color
 .gallery-wrap
+    width: 100%
     margin-top: 56px
     .g-item
         padding: 4px
@@ -535,7 +538,9 @@ h2
                 content: ""
                 position: absolute
                 width: 374px
-                height: 376px
+                height: 374px
+                left: -187px
+                z-index: 500
                 -moz-transition-property: background-color, content
                 -o-transition-property: background-color, content
                 -webkit-transition-property: background-color, content
@@ -543,19 +548,266 @@ h2
                 -o-transition-duration: .7s
                 -webkit-transition-duration: .7s
             &::after
-                content: ""
+                content: url(../img/addition.svg)
                 position: absolute
                 width: 59px
                 height: 59px
-                top: -17px
-                left: 157px
-                filter: brightness(900)
+                top: -205px
+                left: -20px
+                visibility: hidden
+                opacity: 0
+                z-index: 500
+                -moz-transition-property: visibility, opacity
+                -o-transition-property: visibility, opacity
+                -webkit-transition-property: visibility, opacity
+                -moz-transition-duration: .7s
+                -o-transition-duration: .7s
+                -webkit-transition-duration: .7s
             &:hover
                 &::before
                     background-color: rgba(0, 0, 0, .7)
                 &::after
-                    content: url(../img/addition.svg)
+                    visibility: visible
+                    opacity: 1
 .pop-g
-    img
+    .img-1, .img-2, .img-3, .img-4, .img-5, .img-6, .img-7, .img-8, .img-9, .img-10
+        position: relative
         width: 374px
-        height: 376px
+        height: 374px
+        background-position: center center
+        background-size: cover
+
+.test-drive
+    width: 100%
+    height: 1332px
+    margin-top: 28px
+    background: url(../img/garanty-bg.png) center no-repeat
+    h1
+        margin-top: 44px
+        margin-left: -35px
+        font-size: 47px
+        font-weight: 500
+        letter-spacing: -.4px
+        line-height: 60px
+        span
+            color: $main-color
+    p
+        width: 515px
+        margin-top: 25px
+        margin-left: -30px
+        letter-spacing: -.2px
+        line-height: 25px
+    .garanty-m, .garanty-o
+        display: flex
+        width: 428px
+        height: 72px
+        box-shadow: 10px 13px 30px -12px #d4d4d4
+        span
+            display: inline-block
+            position: relative
+            width: 310px
+            padding-top: 15px
+            padding-left: 25px
+            letter-spacing: -1.4px
+            line-height: 22px
+        img
+            display: inline-block
+    .garanty-m
+        margin-top: 35px
+        margin-left: -30px
+    .garanty-o
+        margin-top: 20px
+        margin-left: -30px
+.test-form
+    width: 412px
+    height: 444px
+    margin-top: 65px
+    margin-left: 62px
+    color: #ffffff
+    border-radius: 10px
+    border: 1px solid transparent
+    span
+        display: block
+        margin-top: 58px
+        color: #000000
+        text-align: center
+        letter-spacing: .1px
+        font-size: 23px
+        font-weight: 500
+        span
+            margin-top: 10px
+    .test-btn
+        margin-left: 51px
+        margin-top: 10px
+        span
+            color: #ffffff
+            display: inline
+            padding-left: 30px
+            font-size: 18px
+            font-weight: 500
+            &::after
+                content: none
+#test-name, #test-phone
+    margin-left: 51px
+#test-name
+    margin-top: 35px
+#test-phone
+    margin-top: 10px
+.test-form
+    .test-check
+        letter-spacing: -.3px
+        font-size: 10px
+        font-weight: 500
+        span
+            display: inline
+            font-size: 10px
+            font-weight: 100
+            font-weight: 500
+.steps
+    margin-top: 110px
+    h1
+        margin-left: 0px
+        font-size: 35px
+        text-align: center
+        font-weight: 500
+        color: #ffffff
+        letter-spacing: -.1px
+    .items-wrap
+        max-width: 1170px
+        margin-top: 47px
+        margin-left: 19.3%
+    .step-1, .step-2, .step-3, .step-4, .step-5
+        width: 225px
+        height: 419px
+        background-color: #ffffff
+        border-radius: 10px
+        img
+            border-radius: 10px 10px 0px 0px
+            position: relative
+            display: block
+        h2
+            width: 225px
+            position: relative
+            margin-top: 33px
+            text-align: center
+            font-size: 18px
+            &::before
+                content: "1"
+                position: absolute
+                color: $main-color
+                width: 45px
+                height: 45px
+                top: -55px
+                left: 90px
+                padding-top: 10px
+                border-radius: 50px
+                background: #ffffff
+                z-index: 600
+        p
+            width: 210px
+            margin: 0px
+            padding-left: 15px
+            text-align: center
+            letter-spacing: -.5px
+            line-height: 22px
+            font-size: 16px
+    .step-1
+        height: 463px
+        a
+            display: block
+            position: relative
+            width: 174px
+            height: 43px
+            margin-top: 20px
+            margin-left: 25px
+            padding-top: 8px
+            padding-left: 22px
+            color: #ffffff
+            font-weight: 500
+            background: linear-gradient(to top, #63a440, #7dce4e)
+            border-bottom: 3px solid #4c8d27
+            border-radius: 50px
+            box-shadow: 0 5px 10px #bbdba8
+            -moz-transition-property: box-shadow
+            -o-transition-property: box-shadow
+            -webkit-transition-property: box-shadow
+            -moz-transition-duration: .3s
+            -o-transition-duration: .3s
+            -webkit-transition-duration: .3s
+            &:hover
+                background: linear-gradient(to top, #68aa44, #88d659)
+                box-shadow: 0 5px 20px #91c572
+                text-decoration: none
+            span
+                padding-top: 0px
+                font-size: 15px
+                font-weight: 500
+                text-shadow: 0 1px 0px #4a8929
+    .step-2
+        h2
+            &::before
+                content: "2"
+    .step-3
+        h2
+            &::before
+                content: "3"
+    .step-4
+        h2
+            &::before
+                content: "4"
+    .step-5
+        h2
+            &::before
+                content: "5"
+.about-us
+    text-align: center
+    h1
+        margin-top: 75px
+    p
+        margin-top: 15px
+        line-height: 25px
+        span
+            font-weight: 500
+    .projects
+        max-width: 1200px !important
+        margin-top: 42px
+        p
+            font-size: 14px
+            line-height: 20px
+
+.video
+    height: 700px
+    margin-top: 120px
+    background: url(../img/video-bg.png) center no-repeat
+    .highline
+        text-align: center
+        font-weight: 500
+        h1
+            margin-top: 27px
+            span
+                color: $main-color
+        p
+            margin-top: 18px
+            font-weight: normal
+    .video-cont
+        margin-top: 47px
+        padding-left: 100px
+        a
+            position: relative
+            &::before
+                content: url(../img/play.svg)
+                position: absolute
+                width: 122px
+                height: 122px
+                top: -50px
+                left: 407px
+                padding: 37px 33px 47px 40px
+                background: linear-gradient(to top, #63a440, #7dce4e)
+                border: 7px solid #ffffff
+                border-radius: 60px
+            &:hover
+                &::before
+                    background: linear-gradient(to top, #6bae46, #86d856)
+        img
+            border-radius: 10px
+            box-shadow: 0px 5px 40px 10px #d4d4d4
