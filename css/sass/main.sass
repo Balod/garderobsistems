@@ -9,11 +9,60 @@ h1
 h2
     font-size: 22px
 
+.hidden
+    display: none !important
+
 .main-head
     height: 796px
     padding-top: 39px
     background: url("../img/header-bg.png") center
 
+.button
+    display: block
+    position: relative
+    width: 304px
+    height: 72px
+    margin-left: 145px
+    margin-top: 15px
+    padding-top: 24px
+    padding-left: 36px
+    color: #ffffff
+    font-weight: 500
+    background: linear-gradient(to top, #63a440, #7dce4e)
+    border-bottom: 3px solid #4c8d27
+    border-radius: 50px
+    box-shadow: 0 5px 10px #bbdba8
+    -moz-transition-property: box-shadow
+    -o-transition-property: box-shadow
+    -webkit-transition-property: box-shadow
+    -moz-transition-duration: .3s
+    -o-transition-duration: .3s
+    -webkit-transition-duration: .3s
+    &:hover
+        background: linear-gradient(to top, #68aa44, #88d659)
+        box-shadow: 0 5px 20px #91c572
+        text-decoration: none
+
+.dots-wrap
+    display: flex
+    justify-content: center
+    .dots
+        margin-top: 20px
+        div
+            display: inline-block
+            width: 8px
+            height: 8px
+            border-radius: 8px
+            background-color: #343434
+
+.steps
+    .dots-wrap
+        .dots
+            div
+                background-color: #ffffff
+
+.select
+    background-color: $main-color !important
 .logo
     a
         display: block
@@ -238,6 +287,19 @@ h2
             padding-top: 8px
             letter-spacing: -.2px
             font-weight: 100
+    .download-btn
+            span
+            text-shadow: 0 1px 0px #4a8929
+            &:after
+                content: ""
+                position: absolute
+                display: inline-block
+                left: 251px
+                top: 25px
+                width: 19px
+                height: 19px
+                background-image: url(../img/download.svg)
+                filter: brightness(100)
 .dwnld-form
     margin-top: 105px
     h2
@@ -273,44 +335,7 @@ h2
         background: url(../img/telephone.svg)
         background-repeat: no-repeat
 
-.dwnld-form, .frozen-form, .test-form
-    .download-btn
-        display: block
-        position: relative
-        width: 304px
-        height: 72px
-        margin-left: 145px
-        margin-top: 15px
-        padding-top: 24px
-        padding-left: 36px
-        color: #ffffff
-        font-weight: 500
-        background: linear-gradient(to top, #63a440, #7dce4e)
-        border-bottom: 3px solid #4c8d27
-        border-radius: 50px
-        box-shadow: 0 5px 10px #bbdba8
-        -moz-transition-property: box-shadow
-        -o-transition-property: box-shadow
-        -webkit-transition-property: box-shadow
-        -moz-transition-duration: .3s
-        -o-transition-duration: .3s
-        -webkit-transition-duration: .3s
-        &:hover
-            background: linear-gradient(to top, #68aa44, #88d659)
-            box-shadow: 0 5px 20px #91c572
-            text-decoration: none
-        span
-            text-shadow: 0 1px 0px #4a8929
-            &:after
-                content: ""
-                position: absolute
-                display: inline-block
-                left: 251px
-                top: 25px
-                width: 19px
-                height: 19px
-                background-image: url(../img/download.svg)
-                filter: brightness(100)
+.dwnld-form
     .agreement
         display: block
         position: relative
@@ -352,9 +377,10 @@ h2
         color: $main-color
 
 .room-row-1, .room-row-2
+    max-width: 1200px
     margin-top: 55px
-    margin-left: 19%
-    margin-right: 19%
+    margin-left: auto
+    margin-right: auto
     text-align: center
     h2
         margin-top: 30px
@@ -369,6 +395,17 @@ h2
     height: auto
     h2
         padding-bottom: 25px
+.room-row-1, .items-wrap
+    .left-arrow, .right-arrow
+        width: 60px
+        cursor: pointer
+        img
+            margin-top: 160px
+            height: 22px
+
+.items-wrap
+    .left-arrow, .right-arrow
+        padding-left: 18px
 
 .frozen
     height: 593px
@@ -448,8 +485,6 @@ h2
             padding-left: 0px
             span
                 text-shadow: 0 1px 0px #4a8929
-                &:after
-                    content: none
 
 #frozen-name, #test-name, #test-phone
     display: inline-block
@@ -618,6 +653,14 @@ h2
     .garanty-o
         margin-top: 20px
         margin-left: -30px
+.laptop-wrap
+    width: 100%
+    display: flex
+    justify-content: center
+    margin-top: 50px
+    img
+        width: 428px
+        height: 200px
 .test-form
     width: 412px
     height: 444px
@@ -645,8 +688,7 @@ h2
             padding-left: 30px
             font-size: 18px
             font-weight: 500
-            &::after
-                content: none
+            text-shadow: 0 1px 0px #4a8929
 #test-name, #test-phone
     margin-left: 51px
 #test-name
@@ -673,9 +715,10 @@ h2
         color: #ffffff
         letter-spacing: -.1px
     .items-wrap
-        max-width: 1170px
+        max-width: 1200px
         margin-top: 47px
-        margin-left: 19.3%
+        margin-left: auto
+        margin-right: auto
     .step-1, .step-2, .step-3, .step-4, .step-5
         width: 225px
         height: 419px
@@ -765,7 +808,7 @@ h2
         margin-top: 75px
     p
         margin-top: 15px
-        line-height: 25px
+        line-height: 1.4
         span
             font-weight: 500
     .projects
@@ -776,14 +819,14 @@ h2
             line-height: 20px
 
 .video
-    height: 700px
-    margin-top: 120px
+    height: 751px
+    margin-top: 70px
     background: url(../img/video-bg.png) center no-repeat
     .highline
         text-align: center
         font-weight: 500
         h1
-            margin-top: 27px
+            margin-top: 77px
             span
                 color: $main-color
         p
@@ -811,3 +854,201 @@ h2
         img
             border-radius: 10px
             box-shadow: 0px 5px 40px 10px #d4d4d4
+
+.vlad
+    img
+        margin-top: 87px
+        border-radius: 200px
+    span
+        display: block
+        margin-top: 25px
+        margin-left: 65px
+    a
+        display: inline-block
+        margin-top: 23px
+        margin-left: 38px
+        color: #000000
+        &:hover
+            text-decoration: none
+        &:last-child
+            margin-left: 13px
+        img
+            margin-top: 0px
+            margin-right: 8px
+            display: inline-block
+.approach
+    .achivs
+        margin-left: 75px
+        span
+            display: block
+            position: relative
+            margin-left: 82px
+            letter-spacing: -.2px
+            line-height: 1.3
+            &::before
+                position: absolute
+                width: 54px
+                height: 54px
+                padding: 11px
+                box-shadow: 0 8px 30px -5px #d4d4d4 
+        .award
+            margin-top: 36px
+            &::before
+                content: url(../img/award.svg)
+                left: -80px
+                top: -5px
+        .carpentry
+            margin-top: 27px
+            &::before
+                content: url(../img/carpentry.svg)
+                left: -79px
+                top: -3px
+        .network
+            margin-top: 42px
+            &::before
+                content: url(../img/network.svg)
+                padding: 10px
+                left: -79px
+                top: -13px
+    .app-wrap
+        max-width: 1200px !important
+    h1
+        margin-top: 100px
+        font-size: 45px
+        letter-spacing: -.1px
+        line-height: 1.3
+    h2
+        margin-top: 25px
+        margin-bottom: 5px
+        font-size: 22px
+        font-weight: 500
+
+.coast
+    height: 416px
+    margin-top: 85px
+    background: url(../img/coast-bg.png) center no-repeat
+    text-align: center
+    color: #ffffff
+    h1
+        margin-top: 78px
+        font-size: 35px
+        font-weight: 500
+        line-height: 1.3
+        span
+            color: $main-color
+    p
+        margin-top: 12px
+        line-height: 1.4
+    .coast-btn
+        margin-top: 15px
+        margin-left: 0px
+        padding-left: 0px
+        cursor: pointer
+        box-shadow: 0 5px 10px #3d582d
+        &:hover
+            box-shadow: 0 5px 20px #91c572
+        span
+            text-shadow: 0 1px 0px #4a8929
+
+.contacts
+    h1
+        margin-top: 74px
+        text-align: center
+        font-weight: 500
+    span
+        display: block
+        position: relative
+        padding-left: 65px
+        font-size: 20px
+        font-weight: 500
+        &::before
+            content: ""
+            position: absolute
+            width: 32px
+            height: 41px
+            left: 10px
+            top: -10px
+    p
+        margin-top: 9px
+        margin-left: 65px
+        font-size: 22px
+        font-weight: 100
+    .address
+        margin-top: 130px
+        &::before
+            background: url(../img/placeholder.svg) center no-repeat
+            background-size: contain
+    .phone
+        margin-top: 30px
+        &::before
+            width: 28px
+            left: 12px
+            background: url(../img/phone.svg) center no-repeat
+            background-size: contain
+    .mail
+        margin-top: 28px
+        &::before
+            background: url(../img/mail.svg) center no-repeat
+            background-size: contain
+    .socials
+        margin-top: 27px
+    .cont-wrap
+        a
+            display: inline-block
+            margin-top: 13px
+            margin-right: 8px
+            &:nth-child(8)
+                margin-left: 65px
+    .map-wrap
+        width: 610px
+        height: 455px
+        margin-top: 53px
+        margin-left: -30px
+        border: 5px solid #ffffff
+        border-radius: 10px
+        box-shadow: 0px 20px 30px 0px #d4d4d4
+
+footer
+    height: 110px
+    margin-top: 85px
+    background-color: #343434
+    .foot-wrap
+        max-width: 1200px !important
+    .logo
+        display: block
+        margin-top: 46px
+        font-size: 18px
+        font-weight: 600
+        color: #ffffff
+        text-transform: uppercase
+        &:hover
+            color: #d4d4d4
+            text-decoration: none
+    .slogan
+        color: #ffffff
+        font-weight: 100
+        font-size: 16px
+        p
+            letter-spacing: -.1px
+            margin-top: 35px
+            margin-left: -33px
+    .privacy
+        display: inline-block
+        margin-top: 45px
+        color: #ffffff
+        letter-spacing: -.1px
+        border-bottom: 1px solid #d4d4d4
+        font-size: 16px
+        font-weight: 100
+        &:hover
+            color: #d4d4d4
+            text-decoration: none
+    .autors
+        display: inline-block
+        margin-top: 35px
+        color: #ffffff
+        font-size: 16px
+        font-weight: 100
+        &:hover
+            text-decoration: none
+            color: #d4d4d4

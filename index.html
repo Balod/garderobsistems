@@ -8,7 +8,7 @@
     <title>GARDEROBSISTEM.RU</title>
     <meta name="GARDEROBSISTEM.RU"
         content="Трансформируемые гардеробные системы и гардеробные комнаты по индивидуальным проектам">
-    <meta name="authors">
+    <meta name="authors" content="Дизайнер: Сергей Голованов. Программирование и верстка: Илья Балод">
     <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/fonts.css">
@@ -28,8 +28,8 @@
                     <p>Производство и установка гардеробных систем и гардеробных комнат в Москве</p>
                 </div>
                 <div class="phone col-4">
-                    <a href="#"><img src="img/telegram.svg" alt="Alt"></a>
-                    <a href="#"><img src="img/whatsapp.svg" alt="Alt"></a>
+                    <a href="https://t.me/aristo.market" target="_blank"><img src="img/telegram.svg" alt="Alt"></a>
+                    <a href="https://wa.me/79180569900" target="_blank"><img src="img/whatsapp.svg" alt="Alt"></a>
                     <span>+7 (918) 982-73-25</span>
                     <a href="#">Заказать обратный звонок</a>
                 </div>
@@ -102,7 +102,7 @@
                     <h2>Заполните форму, чтобы получить PDF презентацию</h2>
                     <input id="download-phone" type="text" placeholder="Ваш контактный телефон"><label class="phone-ico"
                         for="download-phone"></label>
-                    <a class="download-btn" href="#"><span>Скачать презентацию</span></a>
+                    <a class="button download-btn" href="#"><span>Скачать презентацию</span></a>
                     <span class="agreement">Я принимаю
                         условия <span>передачи информации</spanspan></span>
                 </div>
@@ -157,27 +157,42 @@
             </div>
         </div>
         <div class="room-row-1 d-flex justify-content-between">
-            <div class="room-wrap">
+            <div class="left-arrow hidden">
+                <img src="img/left-arrow.svg" alt="Alt">
+            </div>
+            <div class="room-wrap room-img-1">
                 <a href="img/badroom.png">
                     <img src="img/badroom.png" alt="Alt">
                 </a>
                 <h2>В спальню</h2>
             </div>
-            <div class="room-wrap">
+            <div class="room-wrap room-img-2">
                 <img src="img/bathroom.png" alt="Alt">
                 <h2>В ванную</h2>
             </div>
-            <div class="room-wrap garderob">
+            <div class="room-wrap room-img-3 garderob">
                 <img src="img/garderob.png" alt="Alt">
                 <h2>Гардеробная комната</h2>
             </div>
-            <div class="room-wrap">
+            <div class="room-wrap room-img-4">
                 <img src="img/garage.png" alt="Alt">
                 <h2>В гараж</h2>
             </div>
-            <div class="room-wrap">
+            <div class="room-wrap room-img-5">
                 <img src="img/entrance.png" alt="Alt">
                 <h2>В прихожую</h2>
+            </div>
+            <div class="right-arrow hidden">
+                <img src="img/right-arrow.svg" alt="Alt">
+            </div>
+        </div>
+        <div class="dots-wrap hidden">
+            <div class="dots">
+                <div class="dot-1 select"></div>
+                <div class="dot-2"></div>
+                <div class="dot-3"></div>
+                <div class="dot-4"></div>
+                <div class="dot-5"></div>
             </div>
         </div>
         <div class="room-row-2 d-flex justify-content-between">
@@ -207,7 +222,7 @@
     <section class="frozen">
         <div class="container">
             <div class="row">
-                <div class="col-6">
+                <div class="col-xl-6 col-12">
                     <div class="fr-wrap">
                         <h1>Закажите <span>бесплатный замер</span> и получите полку в подарок</h1>
                         <span class="stock">Акция действует <span class="counter">до 20 февраля</span></span>
@@ -217,7 +232,7 @@
                         <span class="disigner">Дизайнер <span>Андрей Александров</span></span>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-xl-6 col-12 d-flex justify-content-center">
                     <div class="frozen-form">
                         <div class="hightline-wrap d-flex flex-wrap justify-content-center">
                             <h2>Заполните форму</h2>
@@ -227,7 +242,7 @@
                             for="frozen-name"></label>
                         <input id="frozen-phone" type="text" value="Ваш контактный телефон"><label class="phone-ico"
                             for="frozen-phone"></label>
-                        <a class="download-btn frozen-btn" href="#"><span>Заказать замер</span></a>
+                        <a class="button frozen-btn" href="#"><span>Заказать замер</span></a>
                         <span class="frozen-agreement">Я принимаю условия <span>передачи информации</span></span>
                     </div>
                 </div>
@@ -296,7 +311,7 @@
     <section class="test-drive">
         <div class="container">
             <div class="row">
-                <div class="col-7">
+                <div class="col-xl-7 col-12">
                     <h1>Тест-драйв гардеробной системы и <span>гарантия 10 лет</span></h1>
                     <p>Мы уверены в качестве нашей продукции, поэтому любой клиент может заключить <b>договор
                             тест-драйва
@@ -312,14 +327,17 @@
                         <span><b>Гарантия</b> на остальные гардеробные системы <b>- 2 года</b></span>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="laptop-wrap hidden">
+                    <img src="img/laptop.png" alt="Alt">
+                </div>
+                <div class="col-xl-4 col-12">
                     <div class="test-form">
                         <span>Узнать подробнее<span>об услуге тест-драйва</span></span>
                         <input id="test-name" type="text" value="Введите Ваше имя"><label class="user-ico"
                             for="test-name"></label>
                         <input id="test-phone" type="text" value="Ваш контактный телефон"><label class="phone-ico"
                             for="test-phone"></label>
-                        <a class="download-btn test-btn" href=""><span>Узнать подробнее</span></a>
+                        <a class="button test-btn" href=""><span>Узнать подробнее</span></a>
                         <span class="test-check">Я принимаю условия <span>передачи информации</span></span>
                     </div>
                 </div>
@@ -334,6 +352,9 @@
                 </div>
             </div>
             <div class="items-wrap d-flex justify-content-between">
+                <div class="left-arrow hidden">
+                    <img src="img/left-arrow.svg" alt="Alt">
+                </div>
                 <div class="step-1">
                     <img src="img/request.png" alt="Alt">
                     <h2>Заявка</h2>
@@ -361,6 +382,18 @@
                     <h2>Монтаж</h2>
                     <p>Если необходим монтаж, то мы сами соберем и установим вашу гардеробную систему.</p>
                 </div>
+                <div class="right-arrow hidden">
+                    <img src="img/right-arrow.svg" alt="Alt">
+                </div>
+            </div>
+            <div class="dots-wrap hidden">
+                <div class="dots">
+                    <div class="dot-1 select"></div>
+                    <div class="dot-2"></div>
+                    <div class="dot-3"></div>
+                    <div class="dot-4"></div>
+                    <div class="dot-5"></div>
+                </div>
             </div>
         </div>
     </section>
@@ -377,18 +410,18 @@
             </div>
         </div>
         <div class="projects container">
-            <div class="row d-flex justify-content-between">
-                <div class="col-4">
+            <div class="row d-flex justify-content-center">
+                <div class="col-xl-4 col-6">
                     <img src="img/about-img-1.png" alt="Alt">
                     <p>Телепроект &#171;Ремонт по-честному&#187; на<br>телеканале Рен-ТВ. Уютное гнездышко<br>для артистки
                         Елены Воробей. Выпуск 55<br>эфир от 24.06.2017.</p>
                 </div>
-                <div class="col-4">
+                <div class="col-xl-4 col-6">
                     <img src="img/about-img-2.png" alt="Alt">
                     <p>Телепроект &#171;Ремонт по-честному&#187; на<br>телеканале Рен-ТВ. Синема гостиная для<br>семьи Дениса
                         Шведова. Мебель на балкон.<br>Выпуск 43 эфир от 01.04.2017.</p>
                 </div>
-                <div class="col-4">
+                <div class="col-xl-4 col-6">
                     <img src="img/about-img-3.png" alt="Alt">
                     <p>Телепроект &#171;Ремонт по-честному&#187; на<br>телеканале Рен-ТВ. Цветочный будуар для<br>Саши
                         Савельевой. Система хранения и двери.<br>Выпуск 39 эфир от 04.03.2017.</p>
@@ -414,6 +447,89 @@
             </div>
         </div>
     </section>
+
+    <section class="approach">
+        <div class="app-wrap container">
+            <div class="row">
+                <div class="vlad col-xl-4 col-12">
+                    <img src="img/vladislav.png" alt="Alt">
+                    <span>Связаться с Владиславом:</span>
+                    <a href="https://wa.me/79180569900" target="_blank"><img src="img/whatsapp.svg" alt="Alt">WhatsApp</a>
+                    <a href="https://t.me/aristo.market" target="_blank"><img src="img/telegram.svg" alt="Alt">Telegram</a>
+                </div>
+                <div class="col-xl-8 col-12">
+                    <div class="achivs">
+                        <div class="approach-hl">
+                            <h1>"Мы найдем индивидуальный подход к каждому клиенту"</h1>
+                            <h2>Владислав Любимов</h2>
+                            <p>Руководитель проекта</p>
+                        </div>
+                        <span class="award">Самый крупный проект: гардеробная<br>комната за <b>2.3 млн рублей;</b></span>
+                        <span class="carpentry"><b>Более 12 лет</b> работы с гардеробными системами<br>и производством гардеробных
+                            комнат;</span>
+                        <span class="network">Более <b>160 партнеров</b> по РФ.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="coast">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>Узнайте стоимость своей гардеробной<br>системы ответив на <span>6 простых вопросов</span></h1>
+                    <p>И получите подробную презентацию всех преимуществ<br>наших систем + специальную скидку.</p>
+                    <div class="d-flex justify-content-center">
+                        <div class="coast-btn button"><span>Узнать стоимость</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contacts">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>Наши контакты</h1>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="cont-wrap col-xl-6 col-12">
+                    <span class="address">Адрес офиса:</span>
+                    <p>г. Москва пр-т Кутузовский, д. 5/3</p>
+                    <span class="phone">Телефон:</span>
+                    <p>+7 (918) 982-73-25</p>
+                    <span class="mail">E-mail:</span>
+                    <p>info@aristo.market</p>
+                    <span class="socials">Мы в соц. сетях:</span>
+                    <a href="https://wa.me/79180569900" target="_blank"><img src="img/whatsapp.svg" alt="Alt"></a>
+                    <a href="https://t.me/aristo.market" target="_blank"><img src="img/telegram.svg" alt="Alt"></a>
+                    <a href="https://www.instagram.com/aristo.market" target="_blank"><img src="img/instagram.svg" alt="Alt"></a>
+                    <a href="#" target="_blank"><img src="img/vk.svg" alt="Alt"></a>
+                </div>
+                <div class="col-xl-6 col-12">
+                    <div class="map-wrap">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.4831430323716!2d37.56538861604627!3d55.750108899667026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54bc8eb37e033%3A0x5aa076a8f62a5435!2sKutuzovsky+Ave%2C+5%2F3%2C+Moskva%2C+121248!5e0!3m2!1sen!2sru!4v1551642846716" width="600" height="445" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="foot-wrap container">
+            <div class="row">
+                <div class="col-2"><a class="logo" href="#">Garderob.ru</a></div>
+                <div class="slogan col-4"><p>Производство и установка гардеробных<br>систем и гардеробных комнат и Москве</p></div>
+                <div class="col-4"><a class="privacy" href="#">Политика конфидециальности</a></div>
+                <div class="col-2"><a class="autors" href="http://colibri-marketing.ru/ " target="_blank">Сайт разработан<br>Colibri Marketing</a></div>
+            </div>
+        </div>
+    </footer>
 
     <script src="libs/jquery/jquery-3.3.1.min.js"></script>
     <script src="libs/bootstrap/js/bootstrap.min.js"></script>
