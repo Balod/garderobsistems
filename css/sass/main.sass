@@ -12,6 +12,8 @@ h2
 .hidden
     display: none !important
 
+.twist
+    max-height: 2000px !important
 .main-head
     height: 796px
     padding-top: 39px
@@ -71,6 +73,8 @@ h2
         text-transform: uppercase
         color: #000000
         font-weight: 600
+        &:hover
+            text-decoration: none
 
 .slogan
     p
@@ -87,16 +91,15 @@ h2
             margin-left: 45px
         &:nth-child(2)
             margin-left: 10px
-        &:last-child
-            position: absolute
-            width: 216px
-            top: 22px
-            left: 178px
-            letter-spacing: -1.3px
-            color: #000000
-            text-decoration: underline #a8a7a7
-            &:hover
-                color: #a8a7a7
+    .call-back
+        position: absolute
+        width: 216px
+        top: 22px
+        left: 187px
+        cursor: pointer
+        letter-spacing: -1.3px
+        color: #000000
+        text-decoration: underline #a8a7a7
     span
         position: absolute
         width: 211px
@@ -159,6 +162,7 @@ h2
         width: 376px
         height: 83px
         color: #ffffff
+        cursor: pointer
         font-size: 22px
         font-weight: 500
         background: linear-gradient(to top, #63a440, #7dce4e)
@@ -173,11 +177,11 @@ h2
         -webkit-transition-duration: .3s
         &:hover
             background: linear-gradient(to top, #68aa44, #88d659)
-            text-decoration: none
             box-shadow: 0 10px 20px #91c572
         span
             position: relative
             margin-left: 45px
+            cursor: pointer
             &::after
                 content: ""
                 position: absolute
@@ -186,6 +190,12 @@ h2
                 height: 25px
                 background: url(../img/arrow.svg) center no-repeat
                 filter: brightness(100)
+.mob-bg
+    position: relative
+    left: 0px
+    height: 372px
+    background: url(../img/main-bg-mob.jpg) no-repeat
+    background-size: cover
 .video-wrap
     position: absolute
     top: 468px
@@ -237,6 +247,7 @@ h2
     padding-top: 87px
     .pres-1, .pres-2, .pres-3
         width: 380px
+        margin-top: 15px
         border-radius: 10px
         box-shadow: 0px 15px 30px #ebebeb
     .pres-1, .pres-2
@@ -288,7 +299,9 @@ h2
             letter-spacing: -.2px
             font-weight: 100
     .download-btn
-            span
+        position: relative
+        cursor: pointer
+        span
             text-shadow: 0 1px 0px #4a8929
             &:after
                 content: ""
@@ -300,6 +313,40 @@ h2
                 height: 19px
                 background-image: url(../img/download.svg)
                 filter: brightness(100)
+
+.dnl-form-mob
+    position: relative
+    display: none
+    width: 357px
+    height: 420px
+    background-color: #ffffff
+    border-radius: 10px
+    text-align: center
+    padding-top: 110px
+    box-shadow: 0px 15px 30px -10px #d4d4d4
+    font-size: 16px
+    &::before
+        position: absolute
+        content: ""
+        width: 261px
+        height: 299px
+        top: -190px
+        left: 37px
+        background: url(../img/book.png) center no-repeat
+        background-size: cover
+    #download-phone
+        margin-left: 0px !important
+    h2
+        width: 242px !important
+        font-size: 16px
+        margin-left: 60px !important
+    .download-btn
+        margin-left: 30px !important
+        padding-left: 0px
+    .agreement
+        margin-left: 24px !important
+        &::before
+            left: 30px !important
 .dwnld-form
     margin-top: 105px
     h2
@@ -363,14 +410,15 @@ h2
     .material-photo
         margin-top: 60px
         min-width: 71% !important
-        .second
-            margin-top: 80px
         h2
             margin-top: 30px
             font-weight: 600
+            margin-bottom: 30px
 
 .rooms
     padding-top: 83px
+    h1
+        text-align: center
     .row
         width: 100%
     span
@@ -395,7 +443,7 @@ h2
     height: auto
     h2
         padding-bottom: 25px
-.room-row-1, .items-wrap
+.room-row-1, .items-wrap, .material-photo
     .left-arrow, .right-arrow
         width: 60px
         cursor: pointer
@@ -406,6 +454,11 @@ h2
 .items-wrap
     .left-arrow, .right-arrow
         padding-left: 18px
+
+.material-photo 
+    .right-arrow, .left-arrow
+        img
+            margin-top: 122px
 
 .frozen
     height: 593px
@@ -442,6 +495,7 @@ h2
                 background-image: url(../img/gift.svg)
             span
                 color: $main-color
+                font-weight: 500
         p
             width: 540px
             line-height: 25px
@@ -480,7 +534,7 @@ h2
             &:last-child
                 margin-top: -6px
         .frozen-btn
-            margin-left: 55px 
+            margin-left: 46px 
             margin-top: 10px
             padding-left: 0px
             span
@@ -556,17 +610,11 @@ h2
             color: $main-color
 .gallery-wrap
     width: 100%
+    max-height: 757px
+    overflow: hidden
     margin-top: 56px
     .g-item
-        padding: 4px
-        &:first-child
-            padding-left: 0px
-        &:nth-child(5)
-            padding-right: 0px
-        &:nth-child(6)
-            padding-left: 0px
-        &:nth-child(10)
-            padding-right: 0px
+        padding: 3px
         a
             position: relative
             &::before
@@ -611,6 +659,9 @@ h2
         height: 374px
         background-position: center center
         background-size: cover
+.gal-btn-wrap
+    cursor: pointer
+    margin-top: 10px
 
 .test-drive
     width: 100%
@@ -842,7 +893,7 @@ h2
                 position: absolute
                 width: 122px
                 height: 122px
-                top: -50px
+                top: 171px
                 left: 407px
                 padding: 37px 33px 47px 40px
                 background: linear-gradient(to top, #63a440, #7dce4e)
@@ -1052,3 +1103,53 @@ footer
         &:hover
             text-decoration: none
             color: #d4d4d4
+
+.call-back-form
+    max-width: 412px
+    min-width: 320px
+    height: 390px
+    margin-right: auto
+    margin-left: auto
+    padding-top: 70px
+    border-radius: 10px
+    background-color: #ffffff
+    h2
+        display: block
+        text-align: center
+    .call-back-btn
+        margin-left: 54px
+        padding-left: 70px
+        span
+            cursor: pointer
+    .test-check
+        display: block
+        position: relative
+        margin-left: 88px
+        font-size: 10px
+        font-weight: 500
+        padding: 10px
+        &::before
+            content: url(../img/check.png)
+            position: absolute
+            left: -14px
+            top: 12px
+            width: 15px
+            height: 15px
+        span
+            border-bottom: 1px solid #d4d4d4
+
+#call-back-input
+    display: inline-block
+    position: relative
+    width: 304px
+    height: 60px
+    margin-top: 20px
+    margin-left: 54px
+    padding-left: 63px
+    border: none
+    border-radius: 40px
+    box-shadow: inset 0 3px 20px #ebebeb
+    font-size: 15px
+    font-weight: 100
+    &:focus
+        outline: none

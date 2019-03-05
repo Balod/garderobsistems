@@ -17,11 +17,8 @@
     .phone span {
         left: 113px;
     }
-    .phone a:last-child {
+    .phone .call-back {
         left: 116px;
-    }
-    .presipresentation .pres-3 {
-        margin-top: 15px;
     }
     .main-screen h1 {
         margin-left: 0px;
@@ -138,20 +135,264 @@
     footer .privacy {
         margin-left: 10px;
     }
+    .video .video-cont img {
+        width: 900px;
+    }
 }
 
 /* Medium Devices, Desktops */
-@media only screen and (max-width : 992px) {
-
+@media only screen and (max-width : 991px) {
+    .main-head {
+        height: auto;
+        background-image: none;
+    }
+    .slogan {
+        display: none;
+    }
+    .main-screen h1 {
+        text-align: center;
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .main-screen p {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 22px;
+    }
+    .main-butns .calculate {
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .video-wrap .videos {
+        padding: 0px;
+        margin-top: 200px;
+    }
+    .video-wrap .videos .under-wrap {
+        box-shadow: 0 1px 10px 0px #d4d4d4;
+    }
+    .main-butns .tool {
+        margin-top: 40px;
+    }
+    .download {
+        height: 910px;
+        background: url(../img/dnl-mid-bg.png) top no-repeat;
+    }
+    .download .download-hl h1 {
+        font-size: 30px;
+    }
+    .dnl-form {
+        display: none;
+    }
+    .dnl-form-mob {
+        display: block;
+    }
+    .download .download-hl p {
+        padding-top: 0px;
+    }
+    #download-phone {
+        margin-left: 229px;
+        margin-top: 20px;
+    }
+    .dwnld-form {
+        margin-top: 190px;
+    }
+    .dwnld-form .download-btn {
+        margin-left: 229px;
+        margin-top: 11px;
+    }
+    .dwnld-form .agreement {
+        margin-left: 262px;
+    }
+    .frozen .fr-wrap .stock::before {
+        left: 170px;
+    }
+    .video .video-cont img {
+        width: 715px;
+    }
+    .video .video-cont a::before {
+        left: 300px;
+        top: 125px;
+    }
+    .contacts .address {
+        margin-top: 60px;
+    }
 }
 
 /* Small Devices, Tablets */
-@media only screen and (max-width : 768px) {
-    
+@media only screen and (max-width : 767px) {
+
+    .phone span {
+        display: none;
+    }
+    .phone .call-back {
+        display: none;
+    }
+    .mat-item-1 img, .mat-item-2 img, .mat-item-3 img, .mat-item-4 img, .mat-item-5 img, .mat-item-6 img {
+        width: 216px;
+    }
+    .material-photo .right-arrow img, .material-photo .left-arrow img {
+        margin-top: 93px;
+    }
+    .main-screen p, .download .download-hl p {
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 17px;
+    }
+    .download {
+        height: 842px;
+    }
+    .download .download-hl {
+        padding-top: 70px;
+    }
+    .video-wrap {
+        width: 95% !important;
+    }
+    .video-wrap .videos {
+        margin-top: 224px;
+        padding-left: 20px;
+    }
+    .video-wrap .videos .play {
+        width: 65px;
+        height: 65px;
+    }
+    .video-wrap .videos .play::before {
+        width: 22px;
+        height: 22px;
+        top: 21px;
+        left: 25px;
+    }
+    .video-wrap .videos .under-wrap {
+        width: 153px;
+        height: 42px;
+        top: -22px;
+        padding-top: 6px;
+        padding-left: 29px;
+        font-size: 12px;
+        line-height: 15px;
+        font-weight: normal;
+    }
+    .video .video-cont a::before {
+        top: 50px;
+    }
+    .main-butns .tool, .main-butns .van {
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 17px;
+    }
+    .main-butns .van {
+        padding-top: 38px;
+    }
+    .frozen .fr-wrap .stock::before {
+        left: 40px;
+    }
+    .video .video-cont img{
+        width: 462px;
+    }
+    .video .video-cont a::before {
+        left: 177px;
+    }
+    .contacts .map-wrap {
+        width: 446px;
+    }
+    .contacts .map-wrap iframe {
+        width: 436px;
+    }
+    .test-drive p {
+        width: 454px;
+    }
+    .logo-wrap {
+        max-width: 768px;
+    }
+    .video-wrap {
+        max-width: 768px;
+        left: 0px;
+    }
+    .foot-wrap .privacy-wrap {
+        display: none;
+    }
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
+
+    .presipresentation h2 {
+        font-size: 17px;
+    }
+    .presipresentation p {
+        font-size: 14px;
+    }
+    .download .download-hl {
+        padding-top: 100px;
+    }
+    .download .download-hl h1 {
+        font-size: 20px;
+        line-height: 27px;
+    }
+    .download .download-hl p {
+        font-size: 16px;
+    }
+    .dnl-form-mob {
+        width: 267px;
+        height: 290px;
+        padding-top: 55px;
+    }
+    .dnl-form-mob h2 {
+        line-height: 20px;
+        letter-spacing: -.3px;
+        margin-left: 15px !important;
+        margin-bottom: 15px;
+        font-weight: 600;
+    }
+    .dnl-form-mob::before {
+        width: 222px;
+        height: 255px;
+        top: -198px;
+        left: 16px;
+    }
+    .dnl-form-mob .download-btn {
+        margin-top: 20px;
+    }
+    .dnl-form h2 {
+        font-size: 16px;
+        width: 242px;
+        margin-left: 260px;
+        margin-top: 20px;
+    }
+    #download-phone {
+        margin-left: 277px;
+        margin-top: 4px;
+        width: 208px;
+        height: 50px;
+        padding-left: 50px;
+        font-size: 10px;
+    }
+    .dwnld-form {
+        margin-top: 210px;
+    }
+    .dwnld-form .download-btn {
+        width: 208px;
+        height: 50px;
+        margin-left: 277px;
+        margin-top: 11px;
+        font-size: 12px;
+        padding-top: 15px;
+        padding-left: 0px;
+    }
+    .dnl-form-mob .phone-ico::before {
+        left: -188px;
+        top: -5px;
+    }
+    .download .download-btn span:after {
+        width: 12px;
+        height: 12px;
+        left: 171px;
+        top: 15px;
+    }
+    .dwnld-form .agreement {
+        margin-left: 302px;
+        font-size: 7px;
+    }
 
 }
 

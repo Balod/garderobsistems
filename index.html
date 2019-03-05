@@ -14,6 +14,18 @@
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/media.css">
     <link rel="stylesheet" href="libs/magnific/magnific-popup.css">
+    <script src="http://script.marquiz.ru/v1.js" type="application/javascript"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            Marquiz.init({
+                id: '5c7281172357a00044bb11fe',
+                autoOpen: false,
+                autoOpenFreq: 'once',
+                openOnExit: false
+            });
+        });
+    </script>
+
 </head>
 
 <body>
@@ -21,35 +33,37 @@
     <header class="main-head">
         <div class="logo-wrap container">
             <div class="row">
-                <div class="logo col-3">
+                <div class="logo col-lg-3 col-md-6 col-8">
                     <a href="#">Garderobsistem.ru</a>
                 </div>
                 <div class="slogan col-5">
                     <p>Производство и установка гардеробных систем и гардеробных комнат в Москве</p>
                 </div>
-                <div class="phone col-4">
+                <div class="phone col-lg-4 col-md-6 col-4">
                     <a href="https://t.me/aristo.market" target="_blank"><img src="img/telegram.svg" alt="Alt"></a>
                     <a href="https://wa.me/79180569900" target="_blank"><img src="img/whatsapp.svg" alt="Alt"></a>
                     <span>+7 (918) 982-73-25</span>
-                    <a href="#">Заказать обратный звонок</a>
+                    <div class="call-back">Заказать обратный звонок</a>
                 </div>
             </div>
         </div>
         <div class="main-screen container">
             <div class="main-highline row">
-                <div class="col-8">
+                <div class="col-lg-8 col-12">
                     <h1><span>Трансформируемые</span> гардеробные системы и гардеробные комнаты по индивидуальным
                         проектам</h1>
                     <p>Встроим систему в любую комнату, гараж, офис или обустроим отдельную гардеробную комнату</p>
                 </div>
             </div>
         </div>
+        <div class="mob-bg hidden">
+        </div>
         <div class="main-butns container">
             <div class="row">
-                <div class="col-6">
+                <div class="col-lg-6 col-12">
                     <p class="tool">Производство 8 тыс. м2 в Подмосковье</p>
                     <p class="van">Доставим через 24 часа с момента утверждения дизайн-проекта</p>
-                    <a class="calculate" href="#"><span>Рассчитать стоимость</span></a>
+                    <div class="calculate"><span>Рассчитать стоимость</span></div>
                 </div>
             </div>
             <div class="container video-wrap">
@@ -99,12 +113,24 @@
         <div class="dwnld-form container">
             <div class="row">
                 <div class="col-12">
-                    <h2>Заполните форму, чтобы получить PDF презентацию</h2>
-                    <input id="download-phone" type="text" placeholder="Ваш контактный телефон"><label class="phone-ico"
-                        for="download-phone"></label>
-                    <a class="button download-btn" href="#"><span>Скачать презентацию</span></a>
-                    <span class="agreement">Я принимаю
-                        условия <span>передачи информации</spanspan></span>
+                    <div class="dnl-form">
+                        <h2>Заполните форму, чтобы получить PDF презентацию</h2>
+                        <input id="download-phone" type="text" placeholder="Ваш контактный телефон"><label class="phone-ico"
+                            for="download-phone"></label>
+                        <div class="button download-btn"><span>Скачать презентацию</span></div>
+                        <span class="agreement">Я принимаю
+                            условия <span>передачи информации</spanspan></span>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <div class="dnl-form-mob">
+                            <h2>Заполните форму, чтобы получить PDF презентацию</h2>
+                            <input id="download-phone" type="text" placeholder="Ваш контактный телефон"><label class="phone-ico"
+                                for="download-phone"></label>
+                            <div class="button download-btn"><span>Скачать презентацию</span></div>
+                            <span class="agreement">Я принимаю
+                                условия <span>передачи информации</spanspan></span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -119,32 +145,46 @@
             </div>
         </div>
         <div class="material-photo container">
-            <div class="row">
-                <div class="col-4">
+            <div class="row d-flex justify-content-center">
+                <div class="left-arrow hidden col-1">
+                    <img src="img/left-arrow.svg" alt="Alt">
+                </div>
+                <div class="mat-item-1 col-lg-4 col-6">
                     <img src="img/metal.png" alt="Alt">
                     <h2>Металл</h2>
                 </div>
-                <div class="aluminium col-4">
+                <div class="aluminium mat-item-2 col-lg-4 col-6">
                     <img src="img/aluminium.png" alt="Alt">
                     <h2>Алюминий</h2>
                 </div>
-                <div class="col-4">
+                <div class="mat-item-3 col-lg-4 col-6">
                     <img src="img/ldsp.png" alt="Alt">
                     <h2>ЛДСП</h2>
                 </div>
-            </div>
-            <div class="second row">
-                <div class="col-4">
+                <div class="mat-item-4 col-lg-4 col-6">
                     <img src="img/mdf.png" alt="Alt">
                     <h2>МДФ</h2>
                 </div>
-                <div class="col-4">
+                <div class="mat-item-5 col-lg-4 col-6">
                     <img src="img/plywood.png" alt="Alt">
                     <h2>Фанера</h2>
                 </div>
-                <div class="col-4">
+                <div class="mat-item-6 col-lg-4 col-6">
                     <img src="img/array.png" alt="Alt">
                     <h2>Массив</h2>
+                </div>
+                <div class="right-arrow hidden col-1">
+                    <img src="img/right-arrow.svg" alt="Alt">
+                </div>
+            </div>
+            <div class="dots-wrap hidden">
+                <div class="dots">
+                    <div class="dot-1 select"></div>
+                    <div class="dot-2"></div>
+                    <div class="dot-3"></div>
+                    <div class="dot-4"></div>
+                    <div class="dot-5"></div>
+                    <div class="dot-6"></div>
                 </div>
             </div>
         </div>
@@ -306,6 +346,9 @@
                 </a>
             </div>
         </div>
+        <div class="gal-btn-wrap hidden">
+            <div class="gal-btn">Показать все</div>
+        </div>
     </section>
 
     <section class="test-drive">
@@ -411,17 +454,17 @@
         </div>
         <div class="projects container">
             <div class="row d-flex justify-content-center">
-                <div class="col-xl-4 col-6">
+                <div class="col-xl-4 col-lg-6 col-12">
                     <img src="img/about-img-1.png" alt="Alt">
                     <p>Телепроект &#171;Ремонт по-честному&#187; на<br>телеканале Рен-ТВ. Уютное гнездышко<br>для артистки
                         Елены Воробей. Выпуск 55<br>эфир от 24.06.2017.</p>
                 </div>
-                <div class="col-xl-4 col-6">
+                <div class="col-xl-4 col-lg-6 col-12">
                     <img src="img/about-img-2.png" alt="Alt">
                     <p>Телепроект &#171;Ремонт по-честному&#187; на<br>телеканале Рен-ТВ. Синема гостиная для<br>семьи Дениса
                         Шведова. Мебель на балкон.<br>Выпуск 43 эфир от 01.04.2017.</p>
                 </div>
-                <div class="col-xl-4 col-6">
+                <div class="col-xl-4 col-lg-6 col-12">
                     <img src="img/about-img-3.png" alt="Alt">
                     <p>Телепроект &#171;Ремонт по-честному&#187; на<br>телеканале Рен-ТВ. Цветочный будуар для<br>Саши
                         Савельевой. Система хранения и двери.<br>Выпуск 39 эфир от 04.03.2017.</p>
@@ -441,7 +484,7 @@
         </div>
         <div class="video-cont container">
             <div class="row">
-                <div class="col-12">
+                <div class="col-12 d-flex justify-content-center">
                     <a href="#"><img src="img/video-prev.png" alt="Alt"></a>
                 </div>
             </div>
@@ -523,10 +566,10 @@
     <footer>
         <div class="foot-wrap container">
             <div class="row">
-                <div class="col-2"><a class="logo" href="#">Garderob.ru</a></div>
-                <div class="slogan col-4"><p>Производство и установка гардеробных<br>систем и гардеробных комнат и Москве</p></div>
-                <div class="col-4"><a class="privacy" href="#">Политика конфидециальности</a></div>
-                <div class="col-2"><a class="autors" href="http://colibri-marketing.ru/ " target="_blank">Сайт разработан<br>Colibri Marketing</a></div>
+                <div class="col-lg-2 col-md-3 col-6"><a class="logo" href="#">Garderob.ru</a></div>
+                <div class="slogan col-lg-4"><p>Производство и установка гардеробных<br>систем и гардеробных комнат и Москве</p></div>
+                <div class="privacy-wrap col-lg-4 col-md-5 col-5"><a class="privacy" href="#">Политика конфидециальности</a></div>
+                <div class="col-lg-2 col-md-4 col-6"><a class="autors" href="http://colibri-marketing.ru/ " target="_blank">Сайт разработан<br>Colibri Marketing</a></div>
             </div>
         </div>
     </footer>
@@ -534,6 +577,7 @@
     <script src="libs/jquery/jquery-3.3.1.min.js"></script>
     <script src="libs/bootstrap/js/bootstrap.min.js"></script>
     <script src="libs/magnific/jquery.magnific-popup.min.js"></script>
+    <script src="libs/sliphover/jquery.sliphover.min.js"></script>
     <script src="js/common.js"></script>
 </body>
 
