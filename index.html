@@ -14,18 +14,7 @@
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/media.css">
     <link rel="stylesheet" href="libs/magnific/magnific-popup.css">
-    <script src="http://script.marquiz.ru/v1.js" type="application/javascript"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            Marquiz.init({
-                id: '5c7281172357a00044bb11fe',
-                autoOpen: false,
-                autoOpenFreq: 'once',
-                openOnExit: false
-            });
-        });
-    </script>
-
+    <script src="https://script.marquiz.ru/v1.js" type="application/javascript"></script>
 </head>
 
 <body>
@@ -33,48 +22,49 @@
     <header class="main-head">
         <div class="logo-wrap container">
             <div class="row">
-                <div class="logo col-lg-3 col-md-6 col-8">
+                <div class="logo col-lg-3 col-md-6 col-sm-8 col-6">
                     <a href="#">Garderobsistem.ru</a>
                 </div>
                 <div class="slogan col-5">
                     <p>Производство и установка гардеробных систем и гардеробных комнат в Москве</p>
                 </div>
-                <div class="phone col-lg-4 col-md-6 col-4">
+                <div class="phone col-lg-4 col-md-6 col-sm-4 col-6">
                     <a href="https://t.me/aristo.market" target="_blank"><img src="img/telegram.svg" alt="Alt"></a>
                     <a href="https://wa.me/79180569900" target="_blank"><img src="img/whatsapp.svg" alt="Alt"></a>
                     <span>+7 (918) 982-73-25</span>
                     <div class="call-back">Заказать обратный звонок</a>
-                </div>
-            </div>
-        </div>
-        <div class="main-screen container">
-            <div class="main-highline row">
-                <div class="col-lg-8 col-12">
-                    <h1><span>Трансформируемые</span> гардеробные системы и гардеробные комнаты по индивидуальным
-                        проектам</h1>
-                    <p>Встроим систему в любую комнату, гараж, офис или обустроим отдельную гардеробную комнату</p>
-                </div>
-            </div>
-        </div>
-        <div class="mob-bg hidden">
-        </div>
-        <div class="main-butns container">
-            <div class="row">
-                <div class="col-lg-6 col-12">
-                    <p class="tool">Производство 8 тыс. м2 в Подмосковье</p>
-                    <p class="van">Доставим через 24 часа с момента утверждения дизайн-проекта</p>
-                    <div class="calculate"><span>Рассчитать стоимость</span></div>
-                </div>
-            </div>
-            <div class="container video-wrap">
-                <div class="row d-flex justify-content-center">
-                    <div class="videos">
-                        <div class="play"></div><span class="under-wrap">Посмотрите <span class="under">видео</span> о
-                            наших системах</span>
                     </div>
                 </div>
             </div>
-        </div>
+            <div class="main-screen container">
+                <div class="main-highline row">
+                    <div class="col-lg-8 col-12">
+                        <h1><span>Трансформируемые</span> гардеробные системы и гардеробные комнаты по индивидуальным
+                            проектам</h1>
+                        <p>Встроим систему в любую комнату, гараж, офис или обустроим отдельную гардеробную комнату</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mob-bg hidden">
+            </div>
+            <div class="main-butns container">
+                <div class="row">
+                    <div class="col-lg-6 col-12">
+                        <p class="tool">Производство 8 тыс. м2 в Подмосковье</p>
+                        <p class="van">Доставим через 24 часа с момента утверждения дизайн-проекта</p>
+                        <div class="calculate"><span>Рассчитать стоимость</span></div>
+                    </div>
+                </div>
+                <div class="container video-wrap">
+                    <div class="row d-flex justify-content-center">
+                        <div class="videos">
+                            <div class="play"></div><span class="under-wrap">Посмотрите <span class="under">видео</span>
+                                о
+                                наших системах</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </header>
 
     <section class="presipresentation">
@@ -115,18 +105,26 @@
                 <div class="col-12">
                     <div class="dnl-form">
                         <h2>Заполните форму, чтобы получить PDF презентацию</h2>
-                        <input id="download-phone" type="text" placeholder="Ваш контактный телефон"><label class="phone-ico"
-                            for="download-phone"></label>
-                        <div class="button download-btn"><span>Скачать презентацию</span></div>
+                        <form action="dnl-send.php" method="post">
+                            <input id="download-phone" name="phone" type="text" placeholder="Ваш контактный телефон"
+                                required><label class="phone-ico" for="download-phone"></label>
+                            <a href="https://yadi.sk/i/LWsjP-h0ZZRwFA">
+                                <input type="submit" class="button download-btn" value="Скачать презентацию"><label
+                                    class="dnl-ico" for="download-btn"></label>
+                            </a>
+                        </form>
                         <span class="agreement">Я принимаю
                             условия <span>передачи информации</spanspan></span>
                     </div>
                     <div class="d-flex justify-content-center">
                         <div class="dnl-form-mob">
                             <h2>Заполните форму, чтобы получить PDF презентацию</h2>
-                            <input id="download-phone" type="text" placeholder="Ваш контактный телефон"><label class="phone-ico"
-                                for="download-phone"></label>
-                            <div class="button download-btn"><span>Скачать презентацию</span></div>
+                            <form action="dnl-send.php" method="post">
+                                <input id="download-phone" name="phone" type="text" placeholder="Ваш контактный телефон"
+                                    required><label class="phone-ico" for="download-phone"></label>
+                                <input type="submit" class="button download-btn" value="Скачать презентацию"><label
+                                    class="dnl-ico" for="download-btn"></label>
+                            </form>
                             <span class="agreement">Я принимаю
                                 условия <span>передачи информации</spanspan></span>
                         </div>
@@ -146,38 +144,38 @@
         </div>
         <div class="material-photo container">
             <div class="row d-flex justify-content-center">
-                <div class="left-arrow hidden col-1">
+                <div class="left-arrow col-1">
                     <img src="img/left-arrow.svg" alt="Alt">
                 </div>
-                <div class="mat-item-1 col-lg-4 col-6">
+                <div class="mat-item-1 col-lg-4 col-sm-6 col-10">
                     <img src="img/metal.png" alt="Alt">
                     <h2>Металл</h2>
                 </div>
-                <div class="aluminium mat-item-2 col-lg-4 col-6">
+                <div class="aluminium mat-item-2 col-lg-4 col-sm-6 col-10">
                     <img src="img/aluminium.png" alt="Alt">
                     <h2>Алюминий</h2>
                 </div>
-                <div class="mat-item-3 col-lg-4 col-6">
+                <div class="mat-item-3 col-lg-4 col-sm-6 col-10">
                     <img src="img/ldsp.png" alt="Alt">
                     <h2>ЛДСП</h2>
                 </div>
-                <div class="mat-item-4 col-lg-4 col-6">
+                <div class="mat-item-4 col-lg-4 col-sm-6 col-10">
                     <img src="img/mdf.png" alt="Alt">
                     <h2>МДФ</h2>
                 </div>
-                <div class="mat-item-5 col-lg-4 col-6">
+                <div class="mat-item-5 col-lg-4 col-sm-6 col-10">
                     <img src="img/plywood.png" alt="Alt">
                     <h2>Фанера</h2>
                 </div>
-                <div class="mat-item-6 col-lg-4 col-6">
+                <div class="mat-item-6 col-lg-4 col-sm-6 col-10">
                     <img src="img/array.png" alt="Alt">
                     <h2>Массив</h2>
                 </div>
-                <div class="right-arrow hidden col-1">
+                <div class="right-arrow col-1">
                     <img src="img/right-arrow.svg" alt="Alt">
                 </div>
             </div>
-            <div class="dots-wrap hidden">
+            <div class="dots-wrap">
                 <div class="dots">
                     <div class="dot-1 select"></div>
                     <div class="dot-2"></div>
@@ -191,13 +189,9 @@
     </section>
 
     <section class="rooms">
-        <div class="row">
-            <div class="col-12 d-flex justify-content-center">
-                <h1>Установим в <span>любое</span> помещение и комнату</h1>
-            </div>
-        </div>
-        <div class="room-row-1 d-flex justify-content-between">
-            <div class="left-arrow hidden">
+        <h1>Установим в <span>любое</span> помещение и комнату</h1>
+        <div class="room-row-1 d-flex justify-content-center">
+            <div class="left-arrow">
                 <img src="img/left-arrow.svg" alt="Alt">
             </div>
             <div class="room-wrap room-img-1">
@@ -222,7 +216,7 @@
                 <img src="img/entrance.png" alt="Alt">
                 <h2>В прихожую</h2>
             </div>
-            <div class="right-arrow hidden">
+            <div class="right-arrow">
                 <img src="img/right-arrow.svg" alt="Alt">
             </div>
         </div>
@@ -235,7 +229,7 @@
                 <div class="dot-5"></div>
             </div>
         </div>
-        <div class="room-row-2 d-flex justify-content-between">
+        <div class="room-row-2 d-flex justify-content-center">
             <div class="room-wrap">
                 <img src="img/pantry.png" alt="Alt">
                 <h2>В кладовую</h2>
@@ -265,7 +259,7 @@
                 <div class="col-xl-6 col-12">
                     <div class="fr-wrap">
                         <h1>Закажите <span>бесплатный замер</span> и получите полку в подарок</h1>
-                        <span class="stock">Акция действует <span class="counter">до 20 февраля</span></span>
+                        <span class="stock">Акция действует <span class="counter"></span></span>
                         <p>Специалист приедет к Вам, произведет замер и подарит Вам полку из нашей гардеробной системы
                             бесплатно. Этот шаг
                             вас ни к чему не обязывает.</p>
@@ -278,11 +272,13 @@
                             <h2>Заполните форму</h2>
                             <h2>на бесплатный замер</h2>
                         </div>
-                        <input id="frozen-name" type="text" value="Введите Ваше имя"><label class="user-ico"
-                            for="frozen-name"></label>
-                        <input id="frozen-phone" type="text" value="Ваш контактный телефон"><label class="phone-ico"
-                            for="frozen-phone"></label>
-                        <a class="button frozen-btn" href="#"><span>Заказать замер</span></a>
+                        <form action="frozen-send.php" method="POST">
+                            <input id="frozen-name" name="name" type="text" placeholder="Введите Ваше имя"
+                                required><label class="user-ico" for="frozen-name"></label>
+                            <input id="frozen-phone" name="phone" type="text" placeholder="Ваш контактный телефон"
+                                required><label class="phone-ico" for="frozen-phone"></label>
+                            <input type="submit" class="button frozen-btn" value="Заказать замер">
+                        </form>
                         <span class="frozen-agreement">Я принимаю условия <span>передачи информации</span></span>
                     </div>
                 </div>
@@ -376,11 +372,13 @@
                 <div class="col-xl-4 col-12">
                     <div class="test-form">
                         <span>Узнать подробнее<span>об услуге тест-драйва</span></span>
-                        <input id="test-name" type="text" value="Введите Ваше имя"><label class="user-ico"
-                            for="test-name"></label>
-                        <input id="test-phone" type="text" value="Ваш контактный телефон"><label class="phone-ico"
-                            for="test-phone"></label>
-                        <a class="button test-btn" href=""><span>Узнать подробнее</span></a>
+                        <form action="test-send.php" method="POST">
+                            <input id="test-name" name="name" type="text" placeholder="Введите Ваше имя" required><label
+                                class="user-ico" for="test-name"></label>
+                            <input id="test-phone" name="phone" type="text" placeholder="Ваш контактный телефон"
+                                required><label class="phone-ico" for="test-phone"></label>
+                            <input class="button test-btn" type="submit" value="Узнать подробнее">
+                        </form>
                         <span class="test-check">Я принимаю условия <span>передачи информации</span></span>
                     </div>
                 </div>
@@ -394,15 +392,15 @@
                     </div>
                 </div>
             </div>
-            <div class="items-wrap d-flex justify-content-between">
-                <div class="left-arrow hidden">
+            <div class="items-wrap d-flex justify-content-center">
+                <div class="left-arrow">
                     <img src="img/left-arrow.svg" alt="Alt">
                 </div>
                 <div class="step-1">
                     <img src="img/request.png" alt="Alt">
                     <h2>Заявка</h2>
                     <p>Вы оставляете заявку на<br>сайте или звоните нам по телефону<br>+7 (918) 982-73-25</p>
-                    <a href="#"><span>Оставить заявку</span></a>
+                    <div class="request-btn"><span>Оставить заявку</span></div>
                 </div>
                 <div class="step-2">
                     <img src="img/disign.png" alt="Alt">
@@ -425,7 +423,7 @@
                     <h2>Монтаж</h2>
                     <p>Если необходим монтаж, то мы сами соберем и установим вашу гардеробную систему.</p>
                 </div>
-                <div class="right-arrow hidden">
+                <div class="right-arrow">
                     <img src="img/right-arrow.svg" alt="Alt">
                 </div>
             </div>
@@ -456,12 +454,14 @@
             <div class="row d-flex justify-content-center">
                 <div class="col-xl-4 col-lg-6 col-12">
                     <img src="img/about-img-1.png" alt="Alt">
-                    <p>Телепроект &#171;Ремонт по-честному&#187; на<br>телеканале Рен-ТВ. Уютное гнездышко<br>для артистки
+                    <p>Телепроект &#171;Ремонт по-честному&#187; на<br>телеканале Рен-ТВ. Уютное гнездышко<br>для
+                        артистки
                         Елены Воробей. Выпуск 55<br>эфир от 24.06.2017.</p>
                 </div>
                 <div class="col-xl-4 col-lg-6 col-12">
                     <img src="img/about-img-2.png" alt="Alt">
-                    <p>Телепроект &#171;Ремонт по-честному&#187; на<br>телеканале Рен-ТВ. Синема гостиная для<br>семьи Дениса
+                    <p>Телепроект &#171;Ремонт по-честному&#187; на<br>телеканале Рен-ТВ. Синема гостиная для<br>семьи
+                        Дениса
                         Шведова. Мебель на балкон.<br>Выпуск 43 эфир от 01.04.2017.</p>
                 </div>
                 <div class="col-xl-4 col-lg-6 col-12">
@@ -485,7 +485,7 @@
         <div class="video-cont container">
             <div class="row">
                 <div class="col-12 d-flex justify-content-center">
-                    <a href="#"><img src="img/video-prev.png" alt="Alt"></a>
+                    <div class="prod-video"><img src="img/video-prev.png" alt="Alt"></div>
                 </div>
             </div>
         </div>
@@ -497,8 +497,10 @@
                 <div class="vlad col-xl-4 col-12">
                     <img src="img/vladislav.png" alt="Alt">
                     <span>Связаться с Владиславом:</span>
-                    <a href="https://wa.me/79180569900" target="_blank"><img src="img/whatsapp.svg" alt="Alt">WhatsApp</a>
-                    <a href="https://t.me/aristo.market" target="_blank"><img src="img/telegram.svg" alt="Alt">Telegram</a>
+                    <a href="https://wa.me/79180569900" target="_blank"><img src="img/whatsapp.svg"
+                            alt="Alt">WhatsApp</a>
+                    <a href="https://t.me/aristo.market" target="_blank"><img src="img/telegram.svg"
+                            alt="Alt">Telegram</a>
                 </div>
                 <div class="col-xl-8 col-12">
                     <div class="achivs">
@@ -507,8 +509,10 @@
                             <h2>Владислав Любимов</h2>
                             <p>Руководитель проекта</p>
                         </div>
-                        <span class="award">Самый крупный проект: гардеробная<br>комната за <b>2.3 млн рублей;</b></span>
-                        <span class="carpentry"><b>Более 12 лет</b> работы с гардеробными системами<br>и производством гардеробных
+                        <span class="award">Самый крупный проект: гардеробная<br>комната за <b>2.3 млн
+                                рублей;</b></span>
+                        <span class="carpentry"><b>Более 12 лет</b> работы с гардеробными системами и производством
+                            гардеробных
                             комнат;</span>
                         <span class="network">Более <b>160 партнеров</b> по РФ.</span>
                     </div>
@@ -541,7 +545,7 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="cont-wrap col-xl-6 col-12">
+                <div class="cont-wrap col-xl-6 col-12 order-lg-1 order-2">
                     <span class="address">Адрес офиса:</span>
                     <p>г. Москва пр-т Кутузовский, д. 5/3</p>
                     <span class="phone">Телефон:</span>
@@ -549,14 +553,19 @@
                     <span class="mail">E-mail:</span>
                     <p>info@aristo.market</p>
                     <span class="socials">Мы в соц. сетях:</span>
-                    <a href="https://wa.me/79180569900" target="_blank"><img src="img/whatsapp.svg" alt="Alt"></a>
-                    <a href="https://t.me/aristo.market" target="_blank"><img src="img/telegram.svg" alt="Alt"></a>
-                    <a href="https://www.instagram.com/aristo.market" target="_blank"><img src="img/instagram.svg" alt="Alt"></a>
-                    <a href="#" target="_blank"><img src="img/vk.svg" alt="Alt"></a>
+                    <div class="socials-wrap">
+                        <a href="https://wa.me/79180569900" target="_blank"><img src="img/whatsapp.svg" alt="Alt"></a>
+                        <a href="https://t.me/aristo.market" target="_blank"><img src="img/telegram.svg" alt="Alt"></a>
+                        <a href="https://www.instagram.com/aristo.market" target="_blank"><img src="img/instagram.svg"
+                                alt="Alt"></a>
+                        <a href="#" target="_blank"><img src="img/vk.svg" alt="Alt"></a>
+                    </div>
                 </div>
-                <div class="col-xl-6 col-12">
+                <div class="col-xl-6 col-12 order-lg-2 order-1">
                     <div class="map-wrap">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.4831430323716!2d37.56538861604627!3d55.750108899667026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54bc8eb37e033%3A0x5aa076a8f62a5435!2sKutuzovsky+Ave%2C+5%2F3%2C+Moskva%2C+121248!5e0!3m2!1sen!2sru!4v1551642846716" width="600" height="445" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.4831430323716!2d37.56538861604627!3d55.750108899667026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54bc8eb37e033%3A0x5aa076a8f62a5435!2sKutuzovsky+Ave%2C+5%2F3%2C+Moskva%2C+121248!5e0!3m2!1sen!2sru!4v1551642846716"
+                            width="600" height="445" frameborder="0" style="border:0" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -565,19 +574,23 @@
 
     <footer>
         <div class="foot-wrap container">
-            <div class="row">
-                <div class="col-lg-2 col-md-3 col-6"><a class="logo" href="#">Garderob.ru</a></div>
-                <div class="slogan col-lg-4"><p>Производство и установка гардеробных<br>систем и гардеробных комнат и Москве</p></div>
-                <div class="privacy-wrap col-lg-4 col-md-5 col-5"><a class="privacy" href="#">Политика конфидециальности</a></div>
-                <div class="col-lg-2 col-md-4 col-6"><a class="autors" href="http://colibri-marketing.ru/ " target="_blank">Сайт разработан<br>Colibri Marketing</a></div>
+            <div class="row justify-content-center">
+                <div class="logo-wrap col-lg-2 col-md-3 col-6"><a class="logo" href="#">Garderob.ru</a></div>
+                <div class="slogan col-md-4 col-12">
+                    <p>Производство и установка гардеробных систем и гардеробных комнат и Москве</p>
+                </div>
+                <div class="privacy-wrap col-lg-4 col-md-5 col-12">
+                    <div class="privacy">Политика конфидециальности</div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-md-4 col-6"><a class="autors" href="http://colibri-marketing.ru/ "
+                        target="_blank">Сайт разработан<br>Colibri Marketing</a></div>
             </div>
         </div>
     </footer>
-
     <script src="libs/jquery/jquery-3.3.1.min.js"></script>
     <script src="libs/bootstrap/js/bootstrap.min.js"></script>
     <script src="libs/magnific/jquery.magnific-popup.min.js"></script>
-    <script src="libs/sliphover/jquery.sliphover.min.js"></script>
+    <script src="libs/mask/jquery.maskedinput.js"></script>
     <script src="js/common.js"></script>
 </body>
 

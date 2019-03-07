@@ -1,22 +1,64 @@
 $(document).ready(function () {
+    /*-----------------------Переменные для галереи раздела "Комнаты"-----------------------*/
+    var rooms = [".room-img-1", ".room-img-2", ".room-img-3", ".room-img-4", ".room-img-5"];
+    var room = 0;
+    var dots = [".rooms .dot-1", ".rooms .dot-2", ".rooms .dot-3", ".rooms .dot-4", ".rooms .dot-5"];
+    var dot = 0;
+    /*---------------------------------------------------------------------------------*/
 
-    $(".calculate").click(function(){
+    /*--------------------Переменные для галереи раздела "5 шагов"--------------------*/
+    var steps = [".step-1", ".step-2", ".step-3", ".step-4", ".step-5"];
+    var step = 0;
+    var stepDots = [".steps .dot-1", ".steps .dot-2", ".steps .dot-3", ".steps .dot-4", ".steps .dot-5"];
+    var stepDot = 0;
+    /*-------------------------------------------------------------------------------*/
+
+    /*----------------------Переменные для галереи "Материалы"----------------------*/
+    var materials = [".mat-item-1", ".mat-item-2", ".mat-item-3", ".mat-item-4", ".mat-item-5", ".mat-item-6"]
+    var material = 0;
+    var matDots = [".material-photo .dot-1", ".material-photo .dot-2", ".material-photo .dot-3", ".material-photo .dot-4", ".material-photo .dot-5", ".material-photo .dot-6"];
+    var matDot = 0;
+    /*-----------------------------------------------------------------------------*/
+
+    /*----------------Запускает квиз-опросник----------------*/
+    $(".calculate, .coast-btn").click(function () {
         Marquiz.showModal('5c7281172357a00044bb11fe');
     });
+    /*-------------------------------------------------------*/
 
+    /*--------------------Маска для форм--------------------*/
+    $("#download-phone, #test-phone, #frozen-phone, #call-back-input").mask("+7(999) 999-99-99");
+    /*------------------------------------------------------*/
+
+    /*Функция добавляет счётчик до конца акции. Устанавливает дату следующую за текущей */
+    function stockDate() {
+        var date = new Date();
+        var day = date.getDate() + 1;
+        var month = [" января", " февраля", " марта", " апреля", " мая", " июня", " июля", " августа", " сентября", " октября", " ноября", " декабря"];
+
+        $(".stock .counter").html("до " + day + month[date.getMonth()]);
+    };
+    stockDate();//запускаем функию
+
+    /*----------------------------------------------------------------------------------*/
+
+    /*-----------------------Функция заполняет галерею контентом-----------------------*/
     function gallery() {
         var item = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
         for (var i = 0; i < item.length; i++) {
             if (item[i] < 10) {
-                $(".img-" + item[i]).css("background-image", "url(../public_html/img/gallery/0" + item[i] + ".jpg");    
+                $(".img-" + item[i]).css("background-image", "url(../img/gallery/0" + item[i] + ".jpg");
             } else {
-                $(".img-" + item[i]).css("background-image", "url(../public_html/img/gallery/" + item[i] + ".png");
+                $(".img-" + item[i]).css("background-image", "url(../img/gallery/" + item[i] + ".png");
             }
         }
     }
-    gallery();
+    gallery();//Запускаем функцию
+    /*----------------------------------------------------------------------------*/
 
-    $(".gallery-wrap").magnificPopup({
+    /*----------------------Поп-ап раздел----------------------*/
+
+    $(".gallery-wrap").magnificPopup({//Поп-ап для галереи
         delegate: "a",
         type: "image",
         gallery: {
@@ -24,10 +66,10 @@ $(document).ready(function () {
         }
     });
 
-    $(".call-back").magnificPopup({
+    $(".call-back").magnificPopup({//Поп-ап для формы обратного звонка
         items: [
             {
-                src: '<div class="call-back-form"><h2>Оставьте заявку<br>и мы вам перезвоним</h2><input id="call-back-input" type="text" placeholder="Ваш контактный телефон"><label class="phone-ico" for="call-back-input"></label><div class="button call-back-btn"><span>Заказать звонок</span></div><span class="test-check">Я принимаю условия <span>передачи информации</span></span></div>',
+                src: '<div class="call-back-form"><h2>Оставьте заявку<br>и мы вам перезвоним</h2><form action="call-back-send.php" method="POST"><input id="call-back-input" name="phone" type="text" placeholder="Ваш контактный телефон" required><label class="phone-ico" for="call-back-input"></label><input class="req-form-btn button" type="submit" value="Заказать звонок"></form><span class="test-check">Я принимаю условия <span>передачи информации</span></span></div>',
                 type: 'inline'
             }
         ],
@@ -36,8 +78,34 @@ $(document).ready(function () {
         fixedContentPos: true,
         type: 'image'
     });
-    
-    $(".play").magnificPopup({
+
+    $(".request-btn").magnificPopup({//Поп-ап для формы заказа
+        items: [
+            {
+                src: '<div class="request-form"><h2>Оставьте заявку и мы расскажем подробнее о наших системах</h2><form action = "request-send.php" method = "post"><input id="call-back-input" name="phone" type="text" placeholder="Ваш контактный телефон" required><label class="phone-ico" for="call-back-input"></label><input class="req-form-btn button" type="submit" value="Оставить заявку"></form><span class="test-check">Я принимаю условия <span>передачи информации</span></span></div>',
+                type: 'inline'
+            }
+        ],
+        closeBtnInside: true,
+        closeOnBgClick: true,
+        fixedContentPos: true,
+        type: 'image'
+    });
+
+    $(".privacy").magnificPopup({//Поп-ап для формы политики конфидициальности
+        items: [
+            {
+                src: '<div class="privacy-pop"><h2>Политика конфиденциальности</h2><p>Данная Политика конфиденциальности применима к данному Сайту. После просмотра данного Сайта обязательно прочитайте текст, содержащий политику конфиденциальности используемого сайта. В случае несогласия с данной Политикой конфиденциальности прекратите использование данного Сайта. Заполнив любую из форм и используя данный Сайт, Вы тем самым выражаете согласие с условиями изложенной ниже Политики конфиденциальности. Сайт охраняет конфиденциальность посетителей сайта. Персональная информация Для того чтобы оказывать вам услуги, отвечать на вопросы, выполнять ваши пожелания и требования требуется такая информация, как ваше имя и номер телефона. САЙТ может использовать указанную информацию для ответов на запросы, а также для связи с Вами по телефону с целью предоставления информации о предлагаемых САЙТ услугах и рекламных кампаниях. При поступлении от вас обращения в виде отправки любой заполненной на сайте формы САЙТ может потребоваться связаться с Вами для получения дополнительной информации, необходимой для вашего обслуживания и ответа на интересующие вопросы. САЙТ обязуется не передавать данную информацию третьим лицам без Вашего разрешения, за исключением информации, необходимой для выполнения вашего обслуживания. Со своей стороны, Вы предоставляете САЙТ право использовать любую сообщѐнную Вами информацию для выполнения указанных выше действий.</p><p><b>Безопасность</b><br>Передача персональных данных в любой форме (лично, по телефону или через Интернет) всегда связана с определенным риском, поскольку не существует абсолютно надежных (защищенных от злонамеренных посягательств) систем, однако САЙТ принимает необходимые адекватные меры для минимизации риска и предотвращения несанкционированного доступа, несанкционированного использования и искажения Ваших персональных данных. Несовершеннолетние САЙТ не принимает никакой информации от лиц моложе 18 лет без согласия их родителей или законных опекунов. Кроме того, лица моложе 18 лет не могут совершать каких-либо покупок или иных юридических действий на данном Сайте без согласия родителей или законных опекунов, если это не допускается законодательством.</p><p><b>Модификация</b><br>САЙТ имеет право изменять данную Политику конфиденциальности, изменять и корректировать условия доступа или запрещать доступ к сайту, а также изменять его содержание в любое время без предварительного уведомления.</p></div>',
+                type: 'inline'
+            }
+        ],
+        closeBtnInside: true,
+        closeOnBgClick: true,
+        fixedContentPos: true,
+        type: 'image'
+    });
+
+    $(".play").magnificPopup({//Поп-ап для видео
         items: [
             {
                 src: "https://www.youtube.com/watch?time_continue=24&v=FZDUXenLgcs",
@@ -46,65 +114,97 @@ $(document).ready(function () {
         ],
     });
 
+    $(".prod-video").magnificPopup({//Поп-ап для видео
+        items: [
+            {
+                src: "https://www.youtube.com/watch?v=aW582xmiQLw",
+                type: "iframe"
+            },
+        ],
+    });
+    /*-------------------Конец раздела поп-ап-------------------*/
+
+    /*Функция изменяет видимость объектов для разных разрешений экранов, либо меняет их положение*/
     function widthDetect() {
-        if($(window).width()<1900) {
+        if ($(window).width() < 1900) {
             $(".gal-btn-wrap").removeClass("hidden");
         } else {
             $(".gal-btn-wrap").addClass("hidden");
         };
-        if($(window).width()<=1182) {
-            $(".room-row-2, .room-row-1 .room-wrap").addClass("hidden");
-            $(".room-row-1, .items-wrap").removeClass("justify-content-between");
-            $(".room-row-1, .items-wrap").addClass("justify-content-center");
-            $(".items-wrap>div").addClass("hidden");
-            $(".rooms .left-arrow, .rooms .right-arrow, .room-row-1 .room-img-1, .dots-wrap, .items-wrap .left-arrow, .items-wrap .right-arrow").removeClass("hidden");
-            $(".step-1").removeClass("hidden");
+        if ($(window).width() <= 1182) {
+            $(".room-row-2").addClass("hidden");
+            $(".dots-wrap").removeClass("hidden");
             $(".laptop-wrap").removeClass("hidden");
             $(".vlad").prepend($(".achivs>.approach-hl"));
         } else {
-            $(".room-row-2, .room-row-1 .room-wrap, .room-row-1 .room-img-1, .dots-wrap").removeClass("hidden");
-            $(".room-row-1, .items-wrap").removeClass("justify-content-center");
-            $(".room-row-1, .items-wrap").addClass("justify-content-between");
-            $(".items-wrap>div").removeClass("hidden");
-            $(".rooms .left-arrow, .rooms .right-arrow, .dots-wrap, .items-wrap .left-arrow, .items-wrap .right-arrow").addClass("hidden");
+            $(".room-row-2, .room-row-1 .room-wrap, .dots-wrap").removeClass("hidden");
+            $(".room-row-1 .room-wrap").removeClass("visible");
+            $(".items-wrap .step-1, .items-wrap .step-2, .items-wrap .step-3, .items-wrap .step-4, .items-wrap .step-5").removeClass("hidden");
+            $(".items-wrap .step-1, .items-wrap .step-2, .items-wrap .step-3, .items-wrap .step-4, .items-wrap .step-5").removeClass("visible");
+            $(".dots-wrap").addClass("hidden");
             $(".laptop-wrap").addClass("hidden");
             $(".achivs").prepend($(".vlad>.approach-hl"));
+            $(".rooms .dot-1, .steps .dot-1").addClass("select");
+            $(".rooms .dot-2, .rooms .dot-3, .rooms .dot-4, .rooms .dot-5, .steps .dot-2, .steps .dot-3, .steps .dot-4, .steps .dot-5").removeClass("select");
+            room=0;
+            dot=0;
+            step=0;
+            stepDot=0;
         };
-        if($(window).width()<992) {
-            $(".mat-item-2, .mat-item-3, .mat-item-4, .mat-item-5, .mat-item-6").addClass("hidden ");
-            $(".material-photo .left-arrow, .material-photo .right-arrow, .material-photo .dots-wrap").removeClass("hidden");
+        if ($(window).width() < 992) {
+            $(".rooms").css("padding-top", "80px");
         } else {
             $(".mat-item-1, .mat-item-2, .mat-item-3, .mat-item-4, .mat-item-5, .mat-item-6").removeClass("hidden");
-            $(".material-photo .left-arrow, .material-photo .right-arrow, .material-photo .dots-wrap").addClass("hidden");
+            $(".mat-item-1, .mat-item-2, .mat-item-3, .mat-item-4, .mat-item-5, .mat-item-6").removeClass("visible");
+            $(".rooms").css("padding-top", "5px");
+            $(".material-photo .dot-1").addClass("select");
+            $(".material-photo .dot-2, .material-photo .dot-3, .material-photo .dot-4, .material-photo .dot-5, .material-photo .dot-6").removeClass("select");
+            material=0;
+            matDot=0;
         };
-        if($(window).width()<975) {
+        if ($(window).width() < 975) {
             $(".mob-bg").removeClass("hidden");
         } else {
             $(".mob-bg").addClass("hidden");
         };
+        if ($(window).width() < 481) {
+            $(".logo a").html("Garderob.ru");
+        } else {
+            $(".logo a").html("Garderobsistem.ru");
+        }
     }
-    widthDetect();
-    $(window).resize(function() {
+
+    widthDetect();//Запускаем функцию
+
+    /*---------------------------------------------------------------------------------*/
+
+
+    $(window).resize(function () {//Запускает функцию видимости при ресайзе
         widthDetect();
     });
 
-    var rooms = [".room-img-1", ".room-img-2", ".room-img-3", ".room-img-4", ".room-img-5"];
-    var room = 0;
-    var dots = [".dot-1", ".dot-2", ".dot-3", ".dot-4", ".dot-5"];
-    var dot = 0;
+    /*---------Управляет стрелками галереи раздела "Комнаты"---------*/
     $(".room-row-1>.right-arrow").click(function () {
         if (room < 4) {
-            $(rooms[room]).fadeOut(1000).toggleClass("hidden");
-            $(rooms[room + 1]).fadeIn(1000).toggleClass("hidden");
+            if($(rooms[room]).hasClass("hidden")) {
+                $(rooms[room]).removeClass("hidden");
+            } else {
+                $(rooms[room]).removeClass("visible");
+                $(rooms[room]).addClass("hidden");
+            }
+            $(rooms[room + 1]).addClass("visible");
+            $(rooms[room+1]).removeClass("hidden");
             $(dots[dot]).toggleClass("select");
-            $(dots[dot+1]).toggleClass("select");
+            $(dots[dot + 1]).toggleClass("select");
             room++;
             dot++;
         } else {
             room = 0;
-            dot=0;
-            $(rooms[4]).fadeOut(1000).toggleClass("hidden");;
-            $(rooms[room]).fadeIn(1000).toggleClass("hidden");
+            dot = 0;
+            $(rooms[4]).removeClass("visible");
+            $(rooms[4]).addClass("hidden");
+            $(rooms[room]).removeClass("hidden");
+            $(rooms[room]).addClass("visible");
             $(dots[4]).toggleClass("select");
             $(dots[dot]).toggleClass("select");
         }
@@ -114,37 +214,46 @@ $(document).ready(function () {
         room--;
         dot--;
         $(dots[dot]).toggleClass("select");
-        $(dots[dot+1]).toggleClass("select");
-        $(rooms[room]).fadeIn(1000).toggleClass("hidden");
-        $(rooms[room + 1]).fadeOut(1000).toggleClass("hidden");
+        $(dots[dot + 1]).toggleClass("select");
+        $(rooms[room]).removeClass("hidden");
+        $(rooms[room]).addClass("visible");
+        $(rooms[room + 1]).addClass("hidden");
+        $(rooms[room + 1]).removeClass("visible");
         if (room < 0) {
             room = 4;
             dot = 4;
-            $(rooms[room]).fadeIn(1000).toggleClass("hidden");
-            $(rooms[room + 1]).fadeOut(1000).toggleClass("hidden");
+            $(rooms[room]).removeClass("hidden");
+            $(rooms[room]).addClass("visible");
+            $(rooms[room + 1]).removeClass("visible");
+            $(rooms[room + 1]).addClass("hidden");
             $(dots[dot]).toggleClass("select");
-            $(dots[dot+1]).toggleClass("select");
+            $(dots[dot + 1]).toggleClass("select");
         }
     });
+    /*-----------------------------------------------------*/
 
-    var steps = [".step-1", ".step-2", ".step-3", ".step-4", ".step-5"];
-    var step = 0;
-    var stepDots = [".steps .dot-1", ".steps .dot-2", ".steps .dot-3", ".steps .dot-4", ".steps .dot-5"];
-    var stepDot = 0;
-
+    /*--------Управляет стрелками галереи раздела "5 шагов"--------*/
     $(".items-wrap>.right-arrow").click(function () {
         if (step < 4) {
-            $(steps[step]).fadeOut(1000).toggleClass("hidden");
-            $(steps[step + 1]).fadeIn(1000).toggleClass("hidden");
+            if($(steps[step]).hasClass("hidden")) {
+                $(steps[step]).removeClass("hidden");
+            } else {
+                $(steps[step]).removeClass("visible");
+                $(steps[step]).addClass("hidden");
+            }
+            $(steps[step + 1]).addClass("visible");
+            $(steps[step + 1]).removeClass("hidden");
             $(stepDots[stepDot]).toggleClass("select");
-            $(stepDots[stepDot+1]).toggleClass("select");
+            $(stepDots[stepDot + 1]).toggleClass("select");
             step++;
             stepDot++;
         } else {
             step = 0;
-            stepDot=0;
-            $(steps[4]).fadeOut(1000).toggleClass("hidden");;
-            $(steps[step]).fadeIn(1000).toggleClass("hidden");
+            stepDot = 0;
+            $(steps[4]).removeClass("visible");
+            $(steps[4]).addClass("hidden");
+            $(steps[step]).removeClass("hidden");
+            $(steps[step]).addClass("visible");
             $(stepDots[4]).toggleClass("select");
             $(stepDots[stepDot]).toggleClass("select");
         }
@@ -154,36 +263,47 @@ $(document).ready(function () {
         step--;
         stepDot--;
         $(stepDots[stepDot]).toggleClass("select");
-        $(stepDots[stepDot+1]).toggleClass("select");
-        $(steps[step]).fadeIn(1000).toggleClass("hidden");
-        $(steps[step + 1]).fadeOut(1000).toggleClass("hidden");
+        $(stepDots[stepDot + 1]).toggleClass("select");
+        $(steps[step]).removeClass("hidden");
+        $(steps[step]).addClass("visible");
+        $(steps[step + 1]).addClass("hidden");
+        $(steps[step + 1]).removeClass("visible");
         if (step < 0) {
             step = 4;
             stepDot = 4;
-            $(steps[step]).fadeIn(1000).toggleClass("hidden");
-            $(steps[step + 1]).fadeOut(1000).toggleClass("hidden");
+            $(steps[step]).removeClass("hidden");
+            $(steps[step]).addClass("visible");
+            $(steps[step + 1]).removeClass("visible");
+            $(steps[step + 1]).addClass("hidden");
             $(stepDots[stepDot]).toggleClass("select");
-            $(stepDots[stepDot+1]).toggleClass("select");
+            $(stepDots[stepDot + 1]).toggleClass("select");
         }
     });
+    /*----------------------------------------------------------*/
 
-    var materials = [".mat-item-1", ".mat-item-2", ".mat-item-3", ".mat-item-4", ".mat-item-5", ".mat-item-6"]
-    var material = 0;
-    var matDots = [".material-photo .dot-1", ".material-photo .dot-2", ".material-photo .dot-3", ".material-photo .dot-4", ".material-photo .dot-5", ".material-photo .dot-6"];
-    var matDot = 0;
+    /*---------Управляет стрелками галереи раздела "Материалы"---------*/
+
     $(".material-photo .right-arrow").click(function () {
         if (material < 5) {
             $(matDots[matDot]).toggleClass("select");
-            $(matDots[matDot+1]).toggleClass("select");
-            $(materials[material]).fadeOut(1000).toggleClass("hidden");
-            $(materials[material + 1]).fadeIn(1000).toggleClass("hidden");
+            $(matDots[matDot + 1]).toggleClass("select");
+            if($(materials[material]).hasClass("hidden")) {
+                $(materials[material]).removeClass("hidden");
+            } else {
+                $(materials[material]).removeClass("visible");
+                $(materials[material]).addClass("hidden");
+            }
+            $(materials[material + 1]).addClass("visible");
+            $(materials[material + 1]).removeClass("hidden");
             material++;
             matDot++;
         } else {
             material = 0;
             matDot = 0;
-            $(materials[5]).fadeOut(1000).toggleClass("hidden");;
-            $(materials[material]).fadeIn(1000).toggleClass("hidden");
+            $(materials[5]).removeClass("visible");
+            $(materials[5]).addClass("hidden");
+            $(materials[material]).removeClass("hidden");
+            $(materials[material]).addClass("visible");
             $(matDots[5]).toggleClass("select");
             $(matDots[matDot]).toggleClass("select");
         }
@@ -192,20 +312,32 @@ $(document).ready(function () {
         material--;
         matDot--;
         $(matDots[matDot]).toggleClass("select");
-        $(matDots[matDot+1]).toggleClass("select");
-        $(materials[material]).fadeIn(1000).toggleClass("hidden");
-        $(materials[material + 1]).fadeOut(1000).toggleClass("hidden");
+        $(matDots[matDot + 1]).toggleClass("select");
+        $(materials[material]).removeClass("hidden");
+        $(materials[material]).addClass("visible");
+        $(materials[material + 1]).addClass("hidden");
+        $(materials[material + 1]).removeClass("visible");
         if (material < 0) {
             material = 5;
             matDot = 5;
-            $(materials[material]).fadeIn(1000).toggleClass("hidden");
-            $(materials[material + 1]).fadeOut(1000).toggleClass("hidden");
+            $(materials[material]).removeClass("hidden");
+            $(materials[material]).addClass("visible");
+            $(materials[material + 1]).removeClass("visible");
+            $(materials[material + 1]).addClass("hidden");
             $(matDots[matDot]).toggleClass("select");
-            $(matDots[matDot+1]).toggleClass("select");
+            $(matDots[matDot + 1]).toggleClass("select");
         }
     });
+    /*------------------------------------------------------*/
 
-    $(".gal-btn").click(function() {
+    /*--------------Скрывает и показывает галерею--------------*/
+    $(".gal-btn").click(function () {
         $(".gallery-wrap").toggleClass("twist");
-    })
+        if ($(".gallery-wrap").hasClass("twist")) {
+            $(".gal-btn").html("Скрыть");
+        } else {
+            $(".gal-btn").html("Показать все");
+        };
+    });
+    /*-------------------------------------------------------*/
 })
