@@ -64,7 +64,7 @@
 </html>
 <?php
 /*-------------Получаем данные из формы-------------*/
-$to = "2462802@gmail.com";
+$to = "info@garderobsistem.ru";
 $subject = "Бесплатный замер";
 $phone = $_POST['phone'];
 $name = $_POST['name'];

@@ -74,7 +74,7 @@
 </html>
 <?php
 /*-------------Получаем данные из формы-------------*/
-$to = "2462802@gmail.com";
+$to = "info@garderobsistem.ru";
 $subject = "Форма скачивания презентации";
 $phone = $_POST['phone'];
 $subjeckField = "Из формы: ";

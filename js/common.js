@@ -1,4 +1,10 @@
 $(document).ready(function () {
+
+    /*----------------Запускает квиз-опросник----------------*/
+    $(".calculate, .coast-btn").click(function () {
+        Marquiz.showModal('5c7281172357a00044bb11fe');
+    });
+    /*-------------------------------------------------------*/
     /*-----------------------Переменные для галереи раздела "Комнаты"-----------------------*/
     var rooms = [".room-img-1", ".room-img-2", ".room-img-3", ".room-img-4", ".room-img-5"];
     var room = 0;
@@ -19,12 +25,6 @@ $(document).ready(function () {
     var matDots = [".material-photo .dot-1", ".material-photo .dot-2", ".material-photo .dot-3", ".material-photo .dot-4", ".material-photo .dot-5", ".material-photo .dot-6"];
     var matDot = 0;
     /*-----------------------------------------------------------------------------*/
-
-    /*----------------Запускает квиз-опросник----------------*/
-    $(".calculate, .coast-btn").click(function () {
-        Marquiz.showModal('5c7281172357a00044bb11fe');
-    });
-    /*-------------------------------------------------------*/
 
     /*--------------------Маска для форм--------------------*/
     $("#download-phone, #test-phone, #frozen-phone, #call-back-input").mask("+7(999) 999-99-99");
@@ -117,7 +117,7 @@ $(document).ready(function () {
     $(".prod-video").magnificPopup({//Поп-ап для видео
         items: [
             {
-                src: "https://www.youtube.com/watch?v=aW582xmiQLw",
+                src: "https://www.youtube.com/watch?v=WnkW0Pl9rlU",
                 type: "iframe"
             },
         ],
@@ -167,11 +167,6 @@ $(document).ready(function () {
         } else {
             $(".mob-bg").addClass("hidden");
         };
-        if ($(window).width() < 481) {
-            $(".logo a").html("Garderob.ru");
-        } else {
-            $(".logo a").html("Garderobsistem.ru");
-        }
     }
 
     widthDetect();//Запускаем функцию
